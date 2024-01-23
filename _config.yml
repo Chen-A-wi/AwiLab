@@ -102,5 +102,5 @@ theme: fluid
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:Chen-A-wi/Blog.git
+  repo: git@github.com:Chen-A-wi/AwiLab.git
   branch: gh-pages
