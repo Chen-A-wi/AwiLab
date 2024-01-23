@@ -23,31 +23,30 @@
       transition transform .3s ease-out
 
   .fold-content
-    padding 1rem 1rem
+    & > *
+      margin 0
 
-    & > *:last-child
-      margin-bottom 0
+    & > p
+      padding 1rem 1rem
 
-.fold-default, .fold-secondary
-  background-color rgba(#bbbbbb, 0.25)
+.fold-default
+  background rgba(#bbbbbb, 0.25)
 
 .fold-primary
-  background-color rgba(#b7a0e0, 0.25)
+  background rgba(#b7a0e0, 0.25)
 
 .fold-info
-  background-color rgba(#a0c5e4, 0.25)
+  background rgba(#a0c5e4, 0.25)
 
 .fold-success
-  background-color rgba(#aedcae, 0.25)
+  background rgba(#aedcae, 0.25)
 
 .fold-warning
-  background-color rgba(#f8d6a6, 0.25)
+  background rgba(#f8d6a6, 0.25)
 
 .fold-danger
-  background-color rgba(#eca9a7, 0.25)
+  background rgba(#eca9a7, 0.25)
 
-.fold-light
-  background-color rgba(#fefefe, 0.25)
 
 // note
 .note
@@ -66,13 +65,13 @@
   *:last-child
     margin-bottom 0
 
-.note-default, .note-secondary
-  background-color rgba(#bbbbbb, 0.25)
-  border-color #777
-
 .note-primary
   background-color rgba(#b7a0e0, 0.25)
   border-color #6f42c1
+
+.note-secondary, note-default
+  background-color rgba(#bbbbbb, 0.25)
+  border-color #777
 
 .note-success
   background-color rgba(#aedcae, 0.25)
@@ -104,23 +103,23 @@
   color var(--text-color)
   transition color .2s ease-in-out
 
-.label-default, .label-secondary
-  background-color rgba(#bbbbbb, 0.25)
+.label-default
+  background rgba(#bbbbbb, 0.25)
 
 .label-primary
-  background-color rgba(#b7a0e0, 0.25)
+  background rgba(#b7a0e0, 0.25)
 
 .label-info
-  background-color rgba(#a0c5e4, 0.25)
+  background rgba(#a0c5e4, 0.25)
 
 .label-success
-  background-color rgba(#aedcae, 0.25)
+  background rgba(#aedcae, 0.25)
 
 .label-warning
-  background-color rgba(#f8d6a6, 0.25)
+  background rgba(#f8d6a6, 0.25)
 
 .label-danger
-  background-color rgba(#eca9a7, 0.25)
+  background rgba(#eca9a7, 0.25)
 
 // button
 .markdown-body .btn

@@ -11,10 +11,8 @@ hexo.extend.tag.register('fold', (args, content) => {
       <div class="fold-title fold-${classes.trim()} collapsed" data-toggle="collapse" href="#${id}" role="button" aria-expanded="false" aria-controls="${id}">
         <div class="fold-arrow">▶</div>${text}
       </div>
-      <div class="fold-collapse collapse" id="${id}">
-        <div class="fold-content">
-          ${hexo.render.renderSync({ text: content, engine: 'markdown' }).split('\n').join('')}
-        </div>
+      <div class='fold-content collapse' id="${id}">
+        ${hexo.render.renderSync({ text: content, engine: 'markdown' }).split('\n').join('')}
       </div>
     </div>`;
 }, {
