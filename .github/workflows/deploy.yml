@@ -1,0 +1,72 @@
+# Github action name
+name: Deploy
+
+# 觸發條件
+on:
+  push:
+    branches:
+      - main
+
+# 變數宣告
+env:
+  GIT_USER: Chen-A-wi
+  GIT_EMAIL: tttw216@gmail.com
+  DEPLOY_REPO: Chen-A-wi/AwiLab
+  DEPLOY_BRANCH: gh-pages
+  TZ: 'Asia/Taipei'
+
+
+jobs:
+  build:
+    name: Build on node ${{ matrix.node_version }} & ${{ matrix.os }}
+    runs-on: ubuntu-latest # 建置任務的容器，有下列選擇：ubuntu-latest, windows-latest, macos-latest
+    strategy:
+      matrix:
+        os: [ ubuntu-latest ]
+        node_version: [ 20.x ]
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      # 設定Deploy branch
+      - name: Checkout deploy repo
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ env.DEPLOY_REPO }}
+          ref: ${{ env.DEPLOY_BRANCH }}
+          path: .deploy_git
+
+      - name: Setup Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node_version }}
+
+      - name: Configuration environment
+        env:
+          HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git config --global user.name ${{ env.GIT_USER }}
+          git config --global user.email ${{ env.GIT_EMAIL }}
+
+      # Hexo環境建置
+      - name: Setup Hexo environment
+        run: |
+          npm install -g hexo-cli
+          npm ci
+
+      - name: Hexo clean
+        run: |
+          hexo clean
+
+      - name: Hexo generate
+        run: |
+          hexo generate
+
+      - name: Hexo deploy
+        run: |
+          hexo deploy
