@@ -14,11 +14,15 @@ timezone: ''
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://awilab.com
-permalink: :year/:month/:day/:title/
+permalink: :year:month:day:abbrlink/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+# abbrlink config
+abbrlink:
+  alg: crc32  # 演算法：crc16(default) and crc32
+  rep: dec    # 進位制：dec(default) and hex
 
 # Directory
 source_dir: source
