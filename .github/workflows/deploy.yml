@@ -13,8 +13,6 @@ env:
   GIT_EMAIL: tttw216@gmail.com
   DEPLOY_REPO: Chen-A-wi/AwiLab
   DEPLOY_BRANCH: gh-pages
-  TZ: 'Asia/Taipei'
-
 
 jobs:
   build:
