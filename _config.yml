@@ -108,3 +108,9 @@ deploy:
   type: git
   repo: git@github.com:Chen-A-wi/AwiLab.git
   branch: gh-pages
+
+# https://github.com/vinta/pangu.js
+# Insert a space between Chinese character and English character (中英文之间添加空格)
+pangu:
+  enable: true
+  field: post # site/post
