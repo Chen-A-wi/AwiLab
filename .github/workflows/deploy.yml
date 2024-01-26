@@ -21,15 +21,15 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest ]
-        node_version: [ 20.x ]
+        node_version: ['14.x', '16.x', '18.x']
 
     steps:
       - name: Checkout source
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # 設定Deploy branch
       - name: Checkout deploy repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ${{ env.DEPLOY_REPO }}
           ref: ${{ env.DEPLOY_BRANCH }}
