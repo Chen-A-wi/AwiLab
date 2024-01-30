@@ -6,11 +6,11 @@ index_img: >-
   https://res.cloudinary.com/deu7aohfe/image/upload/v1706275849/202401263323969910/d03cgtwnbyjk7gy4pl37.webp
 abbrlink: 3323969910
 date: 2024-01-26 10:04:39
-categories: [ 心靈雜炊, 心得 ]
+categories: [ 心靈雜炊 ]
 tags: [ Blog,心靈雜炊 ]
 ---
 
-文章斷斷續續也寫了有6年的時間，一路從GitBook、Medium寫到Haxo在這之中也獲得了一些體悟。
+文章斷斷續續也寫了有6年的時間，一路從GitBook、Medium寫到Hexo在這之中也獲得了一些體悟。
 
 今年！決定抽時間出來整理文章筆記，期望以淺顯易動的方式來解說觀念或是我理解的想法，當然如果直接說結果的話，我非常非常推薦寫技術部落格好處多多文章中也會一一細數。
 
