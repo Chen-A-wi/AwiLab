@@ -100,7 +100,7 @@ fun_features:
     # 在指定页面开启，不填则在所有页面开启
     # Enable in specified page, all pages by default
     # Options: home | post | tag | category | about | links | page | 404
-    scope: []
+    scope: [ ]
 
   # 为文章内容中的标题添加锚图标
   # Add an anchor icon to the title on the post page
@@ -239,7 +239,7 @@ custom_css:
 
 # 网页访问统计
 # Analysis of website visitors
-web_analytics:  # 网页访问统计
+web_analytics: # 网页访问统计
   enable: false
 
   # 遵循访客浏览器"请勿追踪"的设置，如果开启则不统计其访问
@@ -346,7 +346,7 @@ navbar:
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
-    #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+    - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
@@ -493,11 +493,11 @@ index:
 
       # 请求头
       # Request headers
-      headers: {}
+      headers: { }
 
       # 从请求结果获取字符串的取值字段，最终必须是一个字符串，例如返回结果为 {"data": {"author": "fluid", "content": "An elegant theme"}}, 则取值字段为 ['data', 'content']；如果返回是列表则自动选择第一项
       # The value field of the string obtained from the response. For example, the response content is {"data": {"author": "fluid", "content": "An elegant theme"}}, the expected `keys: ['data','content']`; if the return is a list, the first item is automatically selected
-      keys: []
+      keys: [ ]
 
   # 自动截取文章摘要
   # Auto extract post
@@ -679,7 +679,7 @@ post:
     enable: true
     # 放大后图片链接替换规则，可用于将压缩图片链接替换为原图片链接，如 ['-slim', ''] 是将链接中 `-slim` 移除；如果想使用正则请使用 `re:` 前缀，如 ['re:\\d{3,4}\\/\\d{3,4}\\/', '']
     # The image url replacement when zooming, the feature can be used to replace the compressed image to the original image, eg: ['-slim', ''] removes `-slim` from the image url when zooming; if you want to use regular, use prefix `re:`, eg: ['re:\\d{3,4}\\/\\d{3,4}\\/','']
-    img_url_replace: ['', '']
+    img_url_replace: [ '', '' ]
 
   # 脚注语法，会在文章底部生成脚注，如果 Markdown 渲染器本身支持，则建议关闭，否则可能会冲突
   # Support footnote syntax, footnotes will be generated at the bottom of the post page. If the Markdown renderer itself supports it, please disable it, otherwise it may conflict
@@ -767,9 +767,9 @@ gitalk:
   clientSecret:
   repo:
   owner:
-  admin: ['name']
+  admin: [ 'name' ]
   language: zh-TW
-  labels: ['Gitalk']
+  labels: [ 'Gitalk' ]
   perPage: 10
   pagerDirection: last
   distractionFreeMode: false
@@ -790,8 +790,8 @@ valine:
   path: window.location.pathname
   placeholder:
   avatar: 'retro'
-  meta: ['nick', 'mail', 'link']
-  requiredFields: []
+  meta: [ 'nick', 'mail', 'link' ]
+  requiredFields: [ ]
   pageSize: 10
   lang: 'zh-CN'
   highlight: false
@@ -808,10 +808,10 @@ valine:
 waline:
   serverURL: ''
   path: window.location.pathname
-  meta: ['nick', 'mail', 'link']
-  requiredMeta: ['nick']
+  meta: [ 'nick', 'mail', 'link' ]
+  requiredMeta: [ 'nick' ]
   lang: 'zh-CN'
-  emoji: ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
+  emoji: [ 'https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo' ]
   dark: 'html[data-user-color-scheme="dark"]'
   wordLimit: 0
   pageSize: 10
@@ -840,7 +840,7 @@ remark42:
   site_id:
   max_shown_comments: 10
   locale: zh
-  components: ['embed']
+  components: [ 'embed' ]
 
 # Twikoo
 # 支持腾讯云、Vercel、Railway 等多种平台部署
@@ -951,15 +951,17 @@ about:
   banner_img: /img/default.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
-  avatar: /img/avatar.png
-  name: "Fluid"
-  intro: "An elegant theme for Hexo"
+  avatar: https://res.cloudinary.com/deu7aohfe/image/upload/c_crop,g_faces,h_300,w_300/about/pivs2fvd5mt5m01yq1wt.jpg
+  name: "CHIAN-WEI, CHEN"
+  intro: "An Android Developer, Nice to meet U 🤗"
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
-    - { class: "iconfont icon-github-fill", link: "https://github.com", tip: "GitHub" }
-    - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
-    - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
+    - { class: "iconfont icon-github-fill", link: "https://github.com/Chen-A-wi", tip: "GitHub" }
+    - { class: "iconfont icon-medium-fill", link: "https://medium.com/%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%B1%82%E7%94%9F%E6%8C%87%E5%8D%97-sofware-engineer-survival-guide", tip: "Medium" }
+    - { class: "iconfont icon-linkedin-fill", link: "https://www.linkedin.com/in/%E9%99%B3%E5%BB%BA%E7%B6%AD-ben", tip: "Linkedin"}
+    - { class: "iconfont icon-mail", link: "mailto:tttw216@gmail.com", tip: "tttw216@gmail.com" }
+#    - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
 
 
 #---------------------------
@@ -1002,21 +1004,9 @@ links:
   # Member item of page
   items:
     - {
-      title: "Fluid Blog",
-      intro: "主题博客",
-      link: "https://hexo.fluid-dev.com/",
-      avatar: "/img/favicon.png"
-    }
-    - {
-      title: "Fluid Docs",
-      intro: "主题使用指南",
-      link: "https://hexo.fluid-dev.com/docs/",
-      avatar: "/img/favicon.png"
-    }
-    - {
-      title: "Fluid Repo",
-      intro: "主题 GitHub 仓库",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
+      title: "工程師求生指南",
+      intro: "Sofware Engineer Survival Guide",
+      link: "https://medium.com/%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%B1%82%E7%94%9F%E6%8C%87%E5%8D%97-sofware-engineer-survival-guide",
       avatar: "/img/favicon.png"
     }
 
