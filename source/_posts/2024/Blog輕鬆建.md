@@ -80,7 +80,9 @@ brew install git
 ### 安裝Hexo
 
 ## 總結
-Blog建置好之後會慢慢補上建置過程，從平台選定、利用Github Action來自動化deploy、Domain設定、SEO等，希望是採小章節短文章的形式避免一次太快跟不上，如果有興趣的朋友可以跟著建置一個屬於自己的Blog，如果有任何問題也歡迎隨時提問。
+Blog的前期準備其實蠻花時間的，各個方面全都要自己來如果需要大量客製化的話，可能就需要把主題拉下來接著去修改裡面的css內容等，就會需要懂程式語言畢竟需要自行維護可客製化的內容。
+
+我也會記錄下我做了哪些更動或是安裝了哪些Plugin從利用Github Action來自動化deploy、Domain設定、SEO等，希望是採小章節短文章的形式避免一次太快跟不上，如果有興趣的朋友可以跟著建置一個屬於自己的Blog，如果有任何問題也歡迎隨時提問。
 
 ## 参考
 - Banner Photo by <a href="https://unsplash.com/@saj_shafique?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Saj Shafique</a> on <a href="https://unsplash.com/photos/silhouette-of-crane-during-sunset-jCJpn7zlyCo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
