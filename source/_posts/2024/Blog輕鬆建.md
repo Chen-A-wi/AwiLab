@@ -58,6 +58,26 @@ Hugo是基於Go語言所開發的，編譯速度是三者之最官網也是直�
 - 主題的選擇相對應Hexo較少，但個人認為較Jekyll新潮一些
 
 ## 如何使用Hexo產出靜態頁？
+在開始之前要先準備好前置準備，就是Node.js與Git Node.js是Hexo產出靜態網站所需的環境，Git則是推上Github所需要的。歐！還有一個Github帳戶。
+
+### 前置準備
+1. 如果是Mac用戶且裝好了Homebrew，那直接輸入下方指令👇。沒有的話可以[點我](https://nodejs.org/en/download/current)去下載安裝Node.js，完成後可以輸入``node -v``確認下版號，如果有出來的話代表安裝成功。
+
+```properties
+brew install node
+```
+
+{% note info %}
+這裡需要注意[Hexo與node相對應的版本](https://hexo.io/zh-cn/docs/index.html#Node-js-%E7%89%88%E6%9C%AC%E9%99%90%E5%88%B6)，別裝錯了。
+{% endnote %}
+
+2. 接著再安裝Git，輸入下方指令👇。沒有的話可以參考[官網](https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8)來安裝，這裡就不多做贅述了，完成後可以輸入``git -v``確認下版號，如果有出來的話代表安裝成功。
+
+```properties
+brew install git
+```
+
+### 安裝Hexo
 
 ## 總結
 Blog建置好之後會慢慢補上建置過程，從平台選定、利用Github Action來自動化deploy、Domain設定、SEO等，希望是採小章節短文章的形式避免一次太快跟不上，如果有興趣的朋友可以跟著建置一個屬於自己的Blog，如果有任何問題也歡迎隨時提問。
