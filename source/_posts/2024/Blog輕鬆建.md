@@ -78,6 +78,32 @@ brew install git
 ```
 
 ### 安裝Hexo
+npm安裝完後一樣可以確認一下版本順便確認是否安裝成功。
+
+```properties
+npm install hexo-cli -g
+```
+
+![Hexo版本](https://res.cloudinary.com/deu7aohfe/image/upload/v1707043605/202402012108647692/xl1aphwqpqd6najjirlo.webp)
+
+### 初始化Hexo
+
+先移動到想放Blog的資料夾根目錄中，像我想放在SideProject裡就先移動至這層資料夾內。
+
+![CD至根目錄](https://res.cloudinary.com/deu7aohfe/image/upload/v1707044173/202402012108647692/mhufwy5bw8gfzsolgl5n.webp)
+
+接著初始化，Hexo本身會建立好資料夾並安裝在裡面，{% label primary @這邊需要注意的是安裝Hexo的資料夾必須是空的，所以建議可以不用先創好直接使用command創立 %}。
+
+```properties
+hexo init '資料夾名稱'
+```
+
+![初始化Hexo](https://res.cloudinary.com/deu7aohfe/image/upload/v1707044288/202402012108647692/atinwqrgpahnbdtatnhw.webp)
+
+### 安裝Hexo所需Plugin
+確認資料夾內部有檔案後
+
+![Blog資料夾](https://res.cloudinary.com/deu7aohfe/image/upload/v1707044803/202402012108647692/fx906snz98a8grnsltas.webp)
 
 ## 總結
 Blog的前期準備其實蠻花時間的，各個方面全都要自己來如果需要大量客製化的話，可能就需要把主題拉下來接著去修改裡面的css內容等，就會需要懂程式語言畢竟需要自行維護可客製化的內容。
