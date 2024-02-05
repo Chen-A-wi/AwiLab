@@ -18,10 +18,10 @@ date: 2024-02-01 21:14:00
 
 Medium則是在我自架Blog前就使用了，主打以文章作為社群媒介我滿喜歡這個idea，前期有非常強大的SEO可以大大提高文章的能見度，可惜後續調整了SEO整個改爛了，也能理解為了營利推廣訂閱會員方案，但目前的推銷方式已經多到讓人厭惡的地步了，也時常因沒有訂閱會員就無法閱讀熱門文章。
 
-思考後像是Medium、HackMD那些都依賴於第三方平台如果哪天像是無名小站一樣漸漸式微的話，當營運方維護費用已經高於盈利絕對會選擇關閉，便得出自架是唯一選擇後剩下是怎麼達成這個目的而已於是踏上這條不歸路。
+思考後像是Medium、HackMD那些都依賴於第三方平台如果哪天像是無名小站一樣漸漸式微的話，當營運方維護費用已經高於盈利絕對會選擇關閉，便得出自架是唯一選擇的結論接著便是怎麼達成這個目的？於是踏上這條不歸路。
 
 ## Github Page選擇？
-建置Github Page選擇百百種，可以藉由下方的條列選項來評估想使用哪種靜態頁面來做開發，如果以原生來說的話Github本身是支援Jekyll的，簡單方便的話可以直接套用Jekyll的主題即可。以上這些工具全都是開源工具，目的只是為了快速產出靜態網站且使維護上更為容易，可以依據需求選擇最適合你的方式。
+建置Github Page選擇百百種，可以藉由下方的條列選項來評估想使用哪種靜態頁面來做開發，如果以原生來說的話Github本身是支援Jekyll的，簡單方便的話可以直接套用Jekyll的主題即可。以上這些工具全都是開源工具，目的只是為了快速產出靜態網站且使維護上更為容易，依據需求選擇最適合你的方式即可。
 
 ### Jekyll
 Jekyll是由Ruby Gem所組成的[^1]，RubyGems是Ruby的Plugin管理器由此可知基底是Ruby。
@@ -110,7 +110,7 @@ hexo init '資料夾名稱'
 tree -N
 ```
 
-確認好資料一樣後可以安裝所需的plugin了，Hexo會依據[package-lock.json](https://yenkos.github.io/2021/04/02/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BB%80%E4%B9%88package-lock.json%20_/)來去做plugin的版本管理也是依據它來安裝。
+確認好資料一樣後可以安裝所需的plugin了，Hexo會依據package-lock.json[^2]來去做plugin的版本管理也是依據它來安裝。
 
 ```properties
 npm install
@@ -143,15 +143,16 @@ hexo s
 
 最後可以copy localhost或是command + 滑鼠左鍵即可跳轉到本地端的網頁了，初始畫面應該會像圖中所示，到這邊恭喜成功嘍！！🎉
 
-![](https://res.cloudinary.com/deu7aohfe/image/upload/v1707097457/202402012108647692/b4gq89xg3ypulgh9kvff.webp)
+![Local web](https://res.cloudinary.com/deu7aohfe/image/upload/v1707097457/202402012108647692/b4gq89xg3ypulgh9kvff.webp)
 
 ## 總結
-Blog的前期準備其實蠻花時間的，各個方面全都要自己來如果需要大量客製化的話，可能就需要把主題拉下來接著去修改裡面的css內容等，就會需要懂程式語言畢竟需要自行維護可客製化的內容。
+Blog的前期準備其實蠻花時間的，各個方面全都要自己來如果需要大量客製化的話，可能就需要把主題拉下來接著去修改裡面的css內容等，就會需要懂程式語言畢竟需要自行維護可客製化的內容，路途上一定會有些顛簸及坑坑洞洞的，克服後一定會有所成場的！
 
-我也會記錄下我做了哪些更動或是安裝了哪些Plugin從利用Github Action來自動化deploy、Domain設定、SEO等，希望是採小章節短文章的形式避免一次太快跟不上，如果有興趣的朋友可以跟著建置一個屬於自己的Blog，如果有任何問題也歡迎隨時提問。
+我也會記錄下我做了哪些更動或是安裝了哪些Plugin從利用Github Action來自動化deploy、Domain設定、SEO等，希望是採小章節短文章的形式避免一次太快跟不上，如果有興趣的朋友可以跟著建置一個屬於自己的Blog，如果有任何問題也歡迎留言提問。
 
 ## 参考
 - Banner Photo by <a href="https://unsplash.com/@saj_shafique?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Saj Shafique</a> on <a href="https://unsplash.com/photos/silhouette-of-crane-during-sunset-jCJpn7zlyCo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 - [靜態網站產生器大比拚](https://raychiutw.github.io/2019/Static-Site-Generator-Comparison/)
 [^1]: [Jekyll安裝](https://www.jekyll.com.cn/docs/installation/#requirements)
+[^2]: [package-lock.json的作用](https://yenkos.github.io/2021/04/02/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BB%80%E4%B9%88package-lock.json%20_/)
   
