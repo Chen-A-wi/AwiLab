@@ -84,7 +84,7 @@ npm安裝完後一樣可以確認一下版本順便確認是否安裝成功。
 npm install hexo-cli -g
 ```
 
-![Hexo版本](https://res.cloudinary.com/deu7aohfe/image/upload/v1707043605/202402012108647692/xl1aphwqpqd6najjirlo.webp)
+![Hexo版本](https://res.cloudinary.com/deu7aohfe/image/upload/v1707095598/202402012108647692/yh2yscv9n5hykqw9rzxi.webp)
 
 ### 初始化Hexo
 
@@ -101,9 +101,49 @@ hexo init '資料夾名稱'
 ![初始化Hexo](https://res.cloudinary.com/deu7aohfe/image/upload/v1707044288/202402012108647692/atinwqrgpahnbdtatnhw.webp)
 
 ### 安裝Hexo所需Plugin
-確認資料夾內部有檔案後
+先``cd``進我們創建的資料夾內容中，可以使用tree這個套件去看資料夾內部的結構，沒有的話可以``brew install tree``，我們只是簡單確認所以只進到第一層級應該會如下圖所顯示。
 
-![Blog資料夾](https://res.cloudinary.com/deu7aohfe/image/upload/v1707044803/202402012108647692/fx906snz98a8grnsltas.webp)
+![Blog資料夾樹狀圖](https://res.cloudinary.com/deu7aohfe/image/upload/v1707095215/202402012108647692/a5e0a8tzfgvyduihkeyl.webp)
+
+如果要全顯示的話可以輸入下方的command，或是[參考這篇文章](https://blog.csdn.net/zhuyunier/article/details/119837816)選擇所需的command。
+```properties
+tree -N
+```
+
+確認好資料一樣後可以安裝所需的plugin了，Hexo會依據[package-lock.json](https://yenkos.github.io/2021/04/02/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BB%80%E4%B9%88package-lock.json%20_/)來去做plugin的版本管理也是依據它來安裝。
+
+```properties
+npm install
+```
+![npm install](https://res.cloudinary.com/deu7aohfe/image/upload/v1707096604/202402012108647692/blj0czqvxjhvmfkmfi80.webp)
+
+{% note info %}
+注意如果有兩部以上的電腦想要同步plugin的話，可以直接刪掉`node_modules`這個資料夾，再`npm install`就會自動依照json檔來安裝其他電腦裡的plugin了，前提是有push json檔案至Git中。
+{% endnote %}
+
+### Build Hexo in local
+完成上述步驟之後差幾步就可以在本地端看到靜態頁面了，加油！
+
+先清除Hexo的暫存檔，這邊記得之後重新產出靜態頁面時要先退出local server的狀態，看過有網友直接clean結果把本地端public的資料夾清掉了。
+
+```properties
+hexo cl
+```
+![Hexo clean](https://res.cloudinary.com/deu7aohfe/image/upload/v1707097060/202402012108647692/a0najy5oq127qknfpxhq.webp)
+
+```properties
+hexo g
+```
+![Hexo generate](https://res.cloudinary.com/deu7aohfe/image/upload/v1707097176/202402012108647692/tg3injdv4bypx7ric5vc.webp)
+
+```properties
+hexo s
+```
+![Hexo server](https://res.cloudinary.com/deu7aohfe/image/upload/v1707097266/202402012108647692/w0qgymnla11ivknbuoy0.webp)
+
+最後可以copy localhost或是command + 滑鼠左鍵即可跳轉到本地端的網頁了，初始畫面應該會像圖中所示，到這邊恭喜成功嘍！！🎉
+
+![](https://res.cloudinary.com/deu7aohfe/image/upload/v1707097457/202402012108647692/b4gq89xg3ypulgh9kvff.webp)
 
 ## 總結
 Blog的前期準備其實蠻花時間的，各個方面全都要自己來如果需要大量客製化的話，可能就需要把主題拉下來接著去修改裡面的css內容等，就會需要懂程式語言畢竟需要自行維護可客製化的內容。
