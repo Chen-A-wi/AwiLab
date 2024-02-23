@@ -1,0 +1,784 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple_touch_icon.png">
+  <link rel="icon" href="/img/favicon32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="CHIAN-WEI, CHEN">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="單純寫文章記錄的話選擇非常的多，不管是 HackMD、Medium 都是非常不錯的選擇，像 HackMD 可以用 Markdown 來編寫對於習慣 Markdown 的我來說可以無痛轉移。 Medium 則是在我自架 Blog 前就使用了，主打以文章作為社群媒介我滿喜歡這個 idea，前期有非常強大的 SEO 可以大大提高文章的能見度，可惜後續調整了 SEO 整個改爛了，也能理解為了營利推廣訂閱會">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog 輕鬆建">
+<meta property="og:url" content="http://awilab.com/202402012108647692/index.html">
+<meta property="og:site_name" content="AwiLab">
+<meta property="og:description" content="單純寫文章記錄的話選擇非常的多，不管是 HackMD、Medium 都是非常不錯的選擇，像 HackMD 可以用 Markdown 來編寫對於習慣 Markdown 的我來說可以無痛轉移。 Medium 則是在我自架 Blog 前就使用了，主打以文章作為社群媒介我滿喜歡這個 idea，前期有非常強大的 SEO 可以大大提高文章的能見度，可惜後續調整了 SEO 整個改爛了，也能理解為了營利推廣訂閱會">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://res.cloudinary.com/deu7aohfe/image/upload/v1706794394/202402012108647692/uqseh2404hwm0neznqto.webp">
+<meta property="article:published_time" content="2024-02-01T21:14:00.000Z">
+<meta property="article:modified_time" content="2024-02-23T10:16:33.998Z">
+<meta property="article:author" content="CHIAN-WEI, CHEN">
+<meta property="article:tag" content="部落格建置">
+<meta property="article:tag" content="Blog">
+<meta property="article:tag" content="Github Page">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://res.cloudinary.com/deu7aohfe/image/upload/v1706794394/202402012108647692/uqseh2404hwm0neznqto.webp">
+  
+  
+  
+  <title>Blog 輕鬆建 - AwiLab</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"awilab.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"|","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>AwiLab</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首頁</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>歸檔</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分類</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>標籤</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>關於</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>連結</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://res.cloudinary.com/deu7aohfe/image/upload/v1706794394/202402012108647692/uqseh2404hwm0neznqto.webp') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Blog 輕鬆建"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-02-01 21:14" pubdate>
+          2024年2月1日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          14 分鐘
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Blog 輕鬆建</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>單純寫文章記錄的話選擇非常的多，不管是 HackMD、Medium 都是非常不錯的選擇，像 HackMD 可以用 Markdown 來編寫對於習慣 Markdown 的我來說可以無痛轉移。</p>
+<p>Medium 則是在我自架 Blog 前就使用了，主打以文章作為社群媒介我滿喜歡這個 idea，前期有非常強大的 SEO 可以大大提高文章的能見度，可惜後續調整了 SEO 整個改爛了，也能理解為了營利推廣訂閱會員方案，但目前的推銷方式已經多到讓人厭惡的地步了，也時常因沒有訂閱會員就無法閱讀熱門文章。</p>
+<p>思考後像是 Medium、HackMD 那些都依賴於第三方平台如果哪天像是無名小站一樣漸漸式微的話，當營運方維護費用已經高於盈利絕對會選擇關閉，便得出自架是唯一選擇的結論接著便是怎麼達成這個目的？於是踏上這條不歸路。</p>
+<h2 id="Github-Page選擇？"><a href="#Github-Page選擇？" class="headerlink" title="Github Page選擇？"></a>Github Page 選擇？</h2><p>建置 Github Page 選擇百百種，可以藉由下方的條列選項來評估想使用哪種靜態頁面來做開發，如果以原生來說的話 Github 本身是支援 Jekyll 的，簡單方便的話可以直接套用 Jekyll 的主題即可。以上這些工具全都是開源工具，目的只是為了快速產出靜態網站且使維護上更為容易，依據需求選擇最適合你的方式即可。</p>
+<h3 id="Jekyll"><a href="#Jekyll" class="headerlink" title="Jekyll"></a>Jekyll</h3><p>Jekyll 是由 Ruby Gem 所組成的 <sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Jekyll安裝](https://www.jekyll.com.cn/docs/installation/#requirements)">[1]</span></a></sup>，RubyGems 是 Ruby 的 Plugin 管理器由此可知基底是 Ruby。</p>
+<h4 id="優點"><a href="#優點" class="headerlink" title="優點"></a>優點</h4><ul>
+<li>從 Medium 移植過來很方便，力推 ZhgChgLi 所製作的 Plugin</li>
+<li>Github 爸爸原生支援</li>
+<li>因為存在非常久了，所以教學文件及資源非常豐富</li>
+</ul>
+<h4 id="缺點"><a href="#缺點" class="headerlink" title="缺點"></a>缺點</h4><ul>
+<li>隨著時間的推移內容較多時，編譯的過時會變得非常慢，這是 Ruby 先天語言的特性</li>
+<li> Jekyll 有段時間沒有更新了</li>
+</ul>
+<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><p>Hexo 是基於 Node.js 所開發的，編譯速度也是三者中居於中位原開發者實測 54 篇文章大概可以在 2 秒內跑完，有興趣的朋友可以去朝聖開發者的文章 <a target="_blank" rel="noopener" href="https://zespia.me/blog/2012/10/11/hexo-debut/">Hexo 颯爽登場！</a>。</p>
+<h4 id="優點-1"><a href="#優點-1" class="headerlink" title="優點"></a>優點</h4><ul>
+<li>主題非常的多，截至目前為止有 404 個<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主題</a>，相較於 Jekyll 或是 Hugo 多非常的多</li>
+<li>套件支援也非常豐富多元</li>
+<li> Hexo 開發討論區大多來自中國，中文化程度與資源相較於 Jekyll 與 Hugo 更為多元</li>
+<li>自帶主題，架設好馬上就可以使用了</li>
+</ul>
+<h4 id="缺點-1"><a href="#缺點-1" class="headerlink" title="缺點"></a>缺點</h4><ul>
+<li>對非中文語系的人來說會討論區較不直覺一些，但這些翻譯都能解決</li>
+</ul>
+<h3 id="Hugo"><a href="#Hugo" class="headerlink" title="Hugo"></a>Hugo</h3><p>Hugo 是基於 Go 語言所開發的，編譯速度是三者之最官網也是直接宣傳 <a target="_blank" rel="noopener" href="https://gohugo.io/">The world’s fastest framework for building websites</a>，對於熟悉 Go 的朋友這個是你的最佳選擇。</p>
+<h4 id="優點-2"><a href="#優點-2" class="headerlink" title="優點"></a>優點</h4><ul>
+<li>三者中最快的，每頁的建置速度不超過 1ms，建置一個 Blog 不會超過 1 秒鐘</li>
+<li>官網也宣稱轉出來後的頁面是純靜態頁面</li>
+</ul>
+<h4 id="缺點-2"><a href="#缺點-2" class="headerlink" title="缺點"></a>缺點</h4><ul>
+<li>主題的選擇相對應 Hexo 較少，但個人認為較 Jekyll 新潮一些</li>
+</ul>
+<h2 id="如何使用Hexo產出靜態頁？"><a href="#如何使用Hexo產出靜態頁？" class="headerlink" title="如何使用Hexo產出靜態頁？"></a>如何使用 Hexo 產出靜態頁？</h2><p>在開始之前要先準備好前置準備，就是 Node.js 與 Git Node.js 是 Hexo 產出靜態網站所需的環境，Git 則是推上 Github 所需要的。歐！還有一個 Github 帳戶。</p>
+<h3 id="前置準備"><a href="#前置準備" class="headerlink" title="前置準備"></a>前置準備</h3><ol>
+<li>如果是 Mac 用戶且裝好了 Homebrew，那直接輸入下方指令👇。沒有的話可以<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/current">點我</a>去下載安裝 Node.js，完成後可以輸入 <code>node -v</code> 確認下版號，如果有出來的話代表安裝成功。</li>
+</ol>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">brew</span> <span class="hljs-string">install node</span><br></code></pre></td></tr></tbody></table></figure>
+
+<div class="note note-info">
+            <p>這裡需要注意 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/index.html#Node-js-%E7%89%88%E6%9C%AC%E9%99%90%E5%88%B6">Hexo 與 node 相對應的版本</a>，別裝錯了。</p>
+          </div>
+
+<ol start="2">
+<li>接著再安裝 Git，輸入下方指令👇。沒有的話可以參考<a target="_blank" rel="noopener" href="https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8">官網</a>來安裝，這裡就不多做贅述了，完成後可以輸入 <code>git -v</code> 確認下版號，如果有出來的話代表安裝成功。</li>
+</ol>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">brew</span> <span class="hljs-string">install git</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h3 id="安裝Hexo"><a href="#安裝Hexo" class="headerlink" title="安裝Hexo"></a>安裝 Hexo</h3><p>npm 安裝完後一樣可以確認一下版本順便確認是否安裝成功。</p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">npm</span> <span class="hljs-string">install hexo-cli -g</span><br></code></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1707095598/202402012108647692/yh2yscv9n5hykqw9rzxi.webp" srcset="/img/loading.gif" lazyload alt="Hexo版本"></p>
+<h3 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化 Hexo</h3><p>先移動到想放 Blog 的資料夾根目錄中，像我想放在 SideProject 裡就先移動至這層資料夾內。</p>
+<p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1707044173/202402012108647692/mhufwy5bw8gfzsolgl5n.webp" srcset="/img/loading.gif" lazyload alt="CD至根目錄"></p>
+<p>接著初始化，Hexo 本身會建立好資料夾並安裝在裡面，<span class="label label-primary">這邊需要注意的是安裝 Hexo 的資料夾必須是空的，所以建議可以不用先創好直接使用 command 創立</span>。</p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">hexo</span> <span class="hljs-string">init '資料夾名稱'</span><br></code></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1707044288/202402012108647692/atinwqrgpahnbdtatnhw.webp" srcset="/img/loading.gif" lazyload alt="初始化Hexo"></p>
+<h3 id="安裝Hexo所需Plugin"><a href="#安裝Hexo所需Plugin" class="headerlink" title="安裝Hexo所需Plugin"></a>安裝 Hexo 所需 Plugin</h3><p>先 <code>cd</code> 進我們創建的資料夾內容中，可以使用 tree 這個套件去看資料夾內部的結構，沒有的話可以 <code>brew install tree</code>，我們只是簡單確認所以只進到第一層級應該會如下圖所顯示。</p>
+<p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1707095215/202402012108647692/a5e0a8tzfgvyduihkeyl.webp" srcset="/img/loading.gif" lazyload alt="Blog資料夾樹狀圖"></p>
+<p>如果要全顯示的話可以輸入下方的 command，或是<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhuyunier/article/details/119837816">參考這篇文章</a>選擇所需的 command。</p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">tree</span> <span class="hljs-string">-N</span><br></code></pre></td></tr></tbody></table></figure>
+
+<p>確認好資料一樣後可以安裝所需的 plugin 了，Hexo 會依據 package-lock.json<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[package-lock.json的作用](https://yenkos.github.io/2021/04/02/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BB%80%E4%B9%88package-lock.json%20_/)">[2]</span></a></sup> 來去做 plugin 的版本管理也是依據它來安裝。</p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">npm</span> <span class="hljs-string">install</span><br></code></pre></td></tr></tbody></table></figure>
+<p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1707096604/202402012108647692/blj0czqvxjhvmfkmfi80.webp" srcset="/img/loading.gif" lazyload alt="npm install"></p>
+<div class="note note-info">
+            <p>注意如果有兩部以上的電腦想要同步 plugin 的話，可以直接刪掉 <code>node_modules</code> 這個資料夾，再 <code>npm install</code> 就會自動依照 json 檔來安裝其他電腦裡的 plugin 了，前提是有 push json 檔案至 Git 中。</p>
+          </div>
+
+<h3 id="Build-Hexo-in-local"><a href="#Build-Hexo-in-local" class="headerlink" title="Build Hexo in local"></a>Build Hexo in local</h3><p>完成上述步驟之後差幾步就可以在本地端看到靜態頁面了，加油！</p>
+<p>先清除 Hexo 的暫存檔，這邊記得之後重新產出靜態頁面時要先退出 local server 的狀態，看過有網友直接 clean 結果把本地端 public 的資料夾清掉了。</p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">hexo</span> <span class="hljs-string">cl</span><br></code></pre></td></tr></tbody></table></figure>
+<p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1707097060/202402012108647692/a0najy5oq127qknfpxhq.webp" srcset="/img/loading.gif" lazyload alt="Hexo clean"></p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">hexo</span> <span class="hljs-string">g</span><br></code></pre></td></tr></tbody></table></figure>
+<p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1707097176/202402012108647692/tg3injdv4bypx7ric5vc.webp" srcset="/img/loading.gif" lazyload alt="Hexo generate"></p>
+<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">hexo</span> <span class="hljs-string">s</span><br></code></pre></td></tr></tbody></table></figure>
+<p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1707097266/202402012108647692/w0qgymnla11ivknbuoy0.webp" srcset="/img/loading.gif" lazyload alt="Hexo server"></p>
+<p>最後可以 copy localhost 或是 command + 滑鼠左鍵即可跳轉到本地端的網頁了，初始畫面應該會像圖中所示，到這邊恭喜成功嘍！！🎉</p>
+<p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1707097457/202402012108647692/b4gq89xg3ypulgh9kvff.webp" srcset="/img/loading.gif" lazyload alt="Local web"></p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>Blog 的前期準備其實蠻花時間的，各個方面全都要自己來如果需要大量客製化的話，可能就需要把主題拉下來接著去修改裡面的 css 內容等，就會需要懂程式語言畢竟需要自行維護可客製化的內容，路途上一定會有些顛簸及坑坑洞洞的，克服後一定會有所成場的！</p>
+<p>我也會記錄下我做了哪些更動或是安裝了哪些 Plugin 從利用 Github Action 來自動化 deploy、Domain 設定、SEO 等，希望是採小章節短文章的形式避免一次太快跟不上，如果有興趣的朋友可以跟著建置一個屬於自己的 Blog，如果有任何問題也歡迎留言提問。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li>Banner Photo by <a target="_blank" rel="noopener" href="https://unsplash.com/@saj_shafique?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Saj Shafique</a> on <a target="_blank" rel="noopener" href="https://unsplash.com/photos/silhouette-of-crane-during-sunset-jCJpn7zlyCo?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></li>
+<li><a target="_blank" rel="noopener" href="https://raychiutw.github.io/2019/Static-Site-Generator-Comparison/">靜態網站產生器大比拚</a><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.jekyll.com.cn/docs/installation/#requirements">Jekyll 安裝</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://yenkos.github.io/2021/04/02/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BB%80%E4%B9%88package-lock.json%20_/">package-lock.json 的作用</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Hexo/" class="category-chain-item">Hexo</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E9%83%A8%E8%90%BD%E6%A0%BC%E5%BB%BA%E7%BD%AE/" class="print-no-link">#部落格建置</a>
+      
+        <a href="/tags/Blog/" class="print-no-link">#Blog</a>
+      
+        <a href="/tags/Github-Page/" class="print-no-link">#Github Page</a>
+      
+        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Blog 輕鬆建</div>
+      <div>http://awilab.com/202402012108647692/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>CHIAN-WEI, CHEN</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>發布於</div>
+          <div>2024年2月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>許可協議</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/202401263323969910/" title="為什麼寫 Blog?">
+                        <span class="hidden-mobile">為什麼寫 Blog?</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'Chen-A-wi/AwiLab');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'Comment');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目錄</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜尋</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">關鍵字</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允許 JavaScript 運行的環境下瀏覽效果更佳</div>
+  </noscript>
+</body>
+</html>
