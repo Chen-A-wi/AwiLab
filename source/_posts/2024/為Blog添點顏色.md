@@ -8,6 +8,7 @@ categories:
   - Hexo
 tags:
   - 部落格建置
+  - 部落格主題
   - Blog
   - Github Page
   - Theme
@@ -16,7 +17,13 @@ tags:
 abbrlink: 3632500070
 date: 2024-02-23 15:24:32
 ---
-完成了Blog本地端建置，目前看起來非常的素面只達到堪用的程度，如果想增加使用體驗的話可以套用主題整體來說不管是UI還是UX都是大大加分，[官網](https://hexo.io/themes/index.html)上截至目前為止有404個主題供選擇。
+到目前為止完成了Blog本地端建置，整體看起來非常的素面只達到堪用的程度如果想要增進UX(User Experience)的話勢必要做點什麼改變有兩個方案可以選擇，可以自己刻UI(User Interface)或是套用主題。
+
+但選擇使用Hexo的一定是希望可以降低維護成本的，所以會以套用主題的方式來改善UX好的主題通常都會留有相對應的空間可進行調整，選擇搭配自己喜歡的設定即可如果想更進一步客製化，就需要參考官方文件像是Next是在source > _data > styles.styl內寫CSS即可。
+
+本篇會以Fluid作為主題可透過本文了解到選用Fluid的原因、Fluid的設定、Plugin及圖床選用等。
+
+## 如何挑選主題？
 
 ## 總結
 
