@@ -35,6 +35,15 @@ date: 2024-02-23 15:24:32
 
 後續在尋找的過程中無意間看到[Fluid](https://github.com/fluid-dev/hexo-theme-fluid)符合我想要的Material Design且首頁文章列表加入圖片也不會顯得非常突兀便選擇了它。
 
+## Fluid設定
+最簡單的方式，現在安裝的Hexo版本都是5.0.0以上了，所以可以透過npm直接安裝後續更新也方便許多。
+
+```properties
+npm install --save hexo-theme-fluid
+```
+
+如果有高度客製化需求的話可以把theme clone到本地的repository，但如果熟悉git可以把主題獨立一個repository使用submodules的方式掛接回原專案主要有兩個原因，因為這樣可以確保撰寫文章的repository的獨立性，抽換theme也可以做到無痛抽換只需更換submodules的連結與sha即可，另一個是maintain theme可以讓branch區分開來提高repository branch的可讀性。
+
 ## 總結
 
 ## 参考
