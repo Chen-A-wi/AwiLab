@@ -44,6 +44,10 @@ npm install --save hexo-theme-fluid
 
 如果有高度客製化需求的話可以把theme clone到本地的repository，但如果熟悉git可以把主題獨立一個repository使用submodules的方式掛接回原專案主要有兩個原因，因為這樣可以確保撰寫文章的repository的獨立性，抽換theme也可以做到無痛抽換只需更換submodules的連結與sha即可，另一個是maintain theme可以讓branch區分開來提高repository branch的可讀性。
 
+## 角標設定
+
+## 圖床選擇
+
 ## 總結
 
 ## 参考
