@@ -104,6 +104,10 @@ date: 2024-02-23 15:24:32
   - site.webmanifest
 
 ## 圖床選擇
+技術部落格一定會有圖片搭配解說，因此產生了圖片存放的需求，直覺上一定是放在Repository裡即可，這麼做會產生兩個問題。
+1. 網頁顯示上的效能問題：
+    在靜態網頁上如果是放在Repository內又沒針對格式去做調整的話，大概沒多久就會達到官方建議的上限5 GB造成Git Clone時間變得非常久除此之外頁面的Loading也會變得緩慢。
+2. Github Repository存放大小限制：
 [Cloudinary](https://cloudinary.com/)
 ## 總結
 
