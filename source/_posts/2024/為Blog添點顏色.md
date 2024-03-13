@@ -63,7 +63,24 @@ npm install --save hexo-theme-fluid
     enable: true
     field: post # site/post
     ```
-- hexo-deployer-git
+- [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)：
+  推送到github repository需要，未來也須使用這個plugin與github action來做CD(Continuous Deployment)。
+  ```properties
+  npm install hexo-deployer-git --save
+  ```
+  設定`_config.yml`內Deploy細節。
+  - type: Deploy模式
+  - repo: Repository連結
+  - branch: 想推上去的分支，`如果是使用github action來deploy，branch就需使用gh-pages`[詳情請看我](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#troubleshooting-publishing-from-a-branch)
+
+  ```yaml
+  # Deployment
+  ## Docs: https://hexo.io/docs/one-command-deployment
+  deploy:
+  type: git
+  repo: Repository clone web url or ssh
+  branch: gh-pages
+  ```
 
 ## 角標設定
 瀏覽網站時
@@ -74,5 +91,4 @@ npm install --save hexo-theme-fluid
 
 ## 参考
 - Banner Photo by <a href="https://unsplash.com/@8moments?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Simon Berger</a> on <a href="https://unsplash.com/photos/landscape-photography-of-mountains-twukN12EN7c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-
-[^1]: aaaa
+- [如何使用 Hexo + GitHub Pages 架設個人網誌](https://hackmd.io/@Heidi-Liu/note-hexo-github)
