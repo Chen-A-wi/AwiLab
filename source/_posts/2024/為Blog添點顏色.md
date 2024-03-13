@@ -15,7 +15,7 @@ tags:
   - Fluid
   - Hexo
 abbrlink: 3632500070
-date: 2024-02-23 15:24:32
+date: 2024-03-14 15:24:32
 ---
 到目前為止完成了Blog本地端建置，整體看起來非常的素面只達到堪用的程度如果想要增進UX(User Experience)的話勢必要做點什麼改變有兩個方案可以選擇，可以自己刻UI(User Interface)或是套用主題。
 
@@ -77,7 +77,7 @@ date: 2024-02-23 15:24:32
   deploy:
   type: git
   repo: Repository clone web url or ssh
-  branch: gh-pages
+  branch: main
   ```
   最後照先前的順序再多加個deploy即可clean > generate > deploy。
   ```properties
@@ -105,10 +105,22 @@ date: 2024-02-23 15:24:32
 
 ## 圖床選擇
 技術部落格一定會有圖片搭配解說，因此產生了圖片存放的需求，直覺上一定是放在Repository裡即可，這麼做會產生兩個問題。
+
 1. 網頁顯示上的效能問題：
-    在靜態網頁上如果是放在Repository內又沒針對格式去做調整的話，大概沒多久就會達到官方建議的上限5 GB造成Git Clone時間變得非常久除此之外頁面的Loading也會變得緩慢。
+    如果檔案格式沒有調整好的話頁面的Loading也會變得緩慢，因為網頁的檔案變得非常肥大，除非針對圖片去預載。
 2. Github Repository存放大小限制：
-[Cloudinary](https://cloudinary.com/)
+   在靜態網頁上如果是放在Repository內又沒針對檔案格式去做調整的話，大概沒多久就會達到官方建議的上限5 GB。
+
+要解決這個問題就需要圖床，存放圖片的地方有些人會上傳到`imgur`可以拿到Url但這有個問題，官方明訂禁止把imgur當作圖床因此圖片在這個平台可以存活的時間不可控。
+
+這裡推薦另一個方案，可以使用[Cloudinary](https://cloudinary.com/)免費就有25GB的空間，如果圖片有轉檔處理過之後大小一定會比起PNG, JPG小上許多，可以將圖片轉成Google新出的圖片格式webp大部分的瀏覽器都支援。Cloudinary除了圖片以外，也支援影片這算是圖床上比較少見的，因為影片佔用的空間相對較大處理上也比較麻煩。
+
+使用上也非常簡單註冊好後點選`Media Explorer`內建就有圖庫了，想要上傳自己的圖片也可以點選右上角`upload`，可以點圖片copy左下角的`Original URL`並依照Markdown的語法貼上連結即可。
+
+![Upload](https://res.cloudinary.com/deu7aohfe/image/upload/v1710342574/202402233632500070/zsqdqmaemczyf1vmfrdf.webp)
+
+![Original URL](https://res.cloudinary.com/deu7aohfe/image/upload/v1710342565/202402233632500070/uyfoxea0wacrz9pjxeib.webp)
+
 ## 總結
 
 ## 参考
