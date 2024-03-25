@@ -23,7 +23,7 @@ date: 2024-03-20 11:39:45
 ## Continuous Deployment
 Continuous Deployment縮寫為CD中文可以翻作續部署，依照需求可以與持續整合（Continuous integration, CI）配合使用，就是大家口中所述的CI/CD。本篇實作並沒有整合自動化單元測試，因只有一人撰寫也未走完整的git flow在我認知中稱不上完整的CI，所以會多著墨於CD的部分。
 
-說了這麼多什麼是Continuous Deployment? IBM是這麼解釋的。
+說了這麼多什麼是Continuous Deployment? [IBM](https://www.ibm.com/topics/continuous-deployment)是這麼解釋的。
 
 > Continuous deployment is a strategy in software development where code changes to an application are released automatically into the production environment.
 
@@ -36,11 +36,11 @@ Continuous Deployment縮寫為CD中文可以翻作續部署，依照需求可以
 
 // TODO: 差table captions or figcaption
 
-|   序号   |   内容  |                  描述                  |
-|  :---:  |  :---:  |:------------------------------------:|
-|    1    |    l    | 大写字母L的小写字母dddddddddddddddddddddddddd |
-|    2    |    I    |                大写字母I                 |
-|    3    |    1    |                 数字1                  |
+|   序号   |   内容  |                                         描述                                         |
+|  :---:  |  :---:  |:----------------------------------------------------------------------------------:|
+|    1    |    l    | 大写字母L的小写字母dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd |
+|    2    |    I    |                                       大写字母I                                        |
+|    3    |    1    |                                        数字1                                         |
 
 <p align="center"><font face="黑体" size=2.>表1 示例表格</font></p>
 
@@ -127,5 +127,7 @@ jobs:
 
 ## 参考
 - Banner Photo by <a href="https://unsplash.com/@phillipglickman?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Phillip Glickman</a> on <a href="https://unsplash.com/photos/green-and-multicolored-robot-figurine-2umO15jsZKM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+- [About billing for GitHub Actions](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)
+- [What is continuous deployment?](https://www.ibm.com/topics/continuous-deployment)
   
   
