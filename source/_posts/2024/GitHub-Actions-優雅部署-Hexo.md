@@ -30,6 +30,31 @@ Continuous Deployment縮寫為CD中文可以翻作續部署，依照需求可以
 大意就是在軟體開發中自動將更動的程式Build Release並提交至Production環境中，以本篇的例子就是Main branch只要有新commit GitHub Action就會自動Build一個靜態網頁並推至gh-pages這個Branch。
 
 ## GitHub Actions
+在[GitHub Universe 2018](https://githubuniverse.com/)，GitHub發佈了GitHub Actions可以透過它實作CI/CD、分支管理、issue分類等。
+
+關於計費[官網](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)寫每個月有2000分鐘/500MB的使用上限，使用分鐘數每個月會重置但是500MB的儲存空間是不會重置的。在機器上的
+
+<style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<p align="center"><font face="黑体" size=2.>表1 示例表格</font></p>
+
+<div class="center">
+
+|   序号   |   内容  |        描述         |
+|  :---:  |  :---:  |  :---------------:  |
+|    1    |    l    |  大写字母L的小写字母l |
+|    2    |    I    |      大写字母I       |
+|    3    |    1    |        数字1       |
+
+</div>
 
 ## GitHub deploy key
 
