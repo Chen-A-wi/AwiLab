@@ -32,19 +32,31 @@ Continuous Deployment縮寫為CD中文可以翻作續部署，依照需求可以
 ## GitHub Actions
 在[GitHub Universe 2018](https://githubuniverse.com/)，GitHub發佈了GitHub Actions可以透過它實作CI/CD、分支管理、issue分類等。
 
-關於計費[官網](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)寫每個月有2000分鐘/500MB的使用上限，使用分鐘數每個月會重置但是500MB的儲存空間是不會重置的。在機器上的
+關於計費[官網](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)寫每個月有2000分鐘/500MB的使用上限，使用分鐘數每個月會重置但是500MB的儲存空間是不會重置的。機器分鐘的計算方式如下方表格，每個系統分鐘數是不一樣的如果有必要的話需要對專案的建置時間來去做優化。
 
-// TODO: 差table captions or figcaption
+|   系統    | 分鐘 |
+|:-------:|:--:|
+|  Linux  | 1  |
+| Windows | 2  |
+|  macOS  | 10 |
 
-|   序号   |   内容  |                                         描述                                         |
-|  :---:  |  :---:  |:----------------------------------------------------------------------------------:|
-|    1    |    l    | 大写字母L的小写字母dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd |
-|    2    |    I    |                                       大写字母I                                        |
-|    3    |    1    |                                        数字1                                         |
-
-<p align="center"><font face="黑体" size=2.>表1 示例表格</font></p>
+本篇是用ubuntu的OS就是Linux，所以分鐘數不用倍數計算。
 
 ## GitHub deploy key
+就如同使用Git GUI推本地端異動到Repository一樣，只是這個情境換到GitHub的Server而已Repository要讀寫第一關一定是認證機制也一樣會需要公私鑰來去認證。
+
+### Generator Key
+1. 打開Terminal輸入下方的command，`e-mail`的部分可以替換成自己的mail，接著就一路Enter下去。
+```properties
+ssh-keygen -t ed25519 -C "e-mail" -f deploy
+```
+2. 一般來說gen出來的key會在`.ssh`的資料夾內，如果沒有特別設定路徑會在`User/.ssh`，這個資料夾預設是隱藏的可以壓`command + shift + .`就可以看到隱藏的資料夾了，內部有兩個檔案`XXX.pub` & `XXX`，沒有更改檔名預設會是deploy。
+   {% note info %}
+   - XXX.pub：公鑰
+   - XXX：私鑰
+   {% endnote %}
+
+### 設定專案公私鑰
 
 ## Yaml設定
 
@@ -129,5 +141,4 @@ jobs:
 - Banner Photo by <a href="https://unsplash.com/@phillipglickman?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Phillip Glickman</a> on <a href="https://unsplash.com/photos/green-and-multicolored-robot-figurine-2umO15jsZKM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 - [About billing for GitHub Actions](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)
 - [What is continuous deployment?](https://www.ibm.com/topics/continuous-deployment)
-  
-  
+- [Hexo + GitHub Actions 部屬網站遷移全紀錄](https://blog.yangjerry.tw/2022/04/19/hexo-github-actions-deploy/)
