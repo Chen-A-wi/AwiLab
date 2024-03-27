@@ -57,8 +57,33 @@ ssh-keygen -t ed25519 -C "e-mail" -f deploy
    {% endnote %}
 
 ### 設定專案公私鑰
+#### 公鑰
+{% note info %}
+Setting > Deploy keys > Add deploy key
+{% endnote %}
+
+Title可以隨個人喜好設定，沒有像branch有特別命名方式；Key就copy XXX沒有副檔名的檔案內容。
+![Add deploy key](https://res.cloudinary.com/deu7aohfe/image/upload/v1711506022/20240320564916095/dbsuhsecjxothzsyce8u.webp)
+
+#### 私鑰
+{% note info %}
+Setting > Secrets and variables > Actions > New repository secret
+{% endnote %}
+
+Title 可以隨個人喜好設定只要Yaml內容有寫對的話機器就不會找不到Key了。
+
+![Add repository secret](https://res.cloudinary.com/deu7aohfe/image/upload/v1711506159/20240320564916095/v3nz73xmz4l0phqehvum.webp)
 
 ## Yaml設定
+新增GitHub Action執行所需的Yaml方式有兩種：
+1. 在`.github`目錄下方新增`workflows`資料夾，並在裡面加入`deploy.yml`的檔案可以針對所需開發自己需要的job。
+2. 透過Web設定，路徑如 `Actions > New workflow > Simple workflow`就會創建一個yml並放在相對應路徑中方便許多，可以參考下方圖片步驟。
+
+![Step 1. New workflow](https://res.cloudinary.com/deu7aohfe/image/upload/v1711508264/20240320564916095/eamt0czo431wsga49vdk.webp)
+
+![Step 2. Create simple workflow](https://res.cloudinary.com/deu7aohfe/image/upload/v1711508499/20240320564916095/dkd879bfpgn1t0ettfb0.webp)
+
+![Step 3. Add Jobs](https://res.cloudinary.com/deu7aohfe/image/upload/v1711508649/20240320564916095/gomia0xnwabytkegyuhx.webp)
 
 ```yaml
 # Github action name
@@ -105,7 +130,7 @@ jobs:
 
       - name: Configuration environment
         env:
-          HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}}
+          HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}} # 須與GitHub上Repository secrets內的secret title一樣
         run: |
           mkdir -p ~/.ssh/
           echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
@@ -136,6 +161,7 @@ jobs:
 ```
 
 ## 總結
+
 
 ## 参考
 - Banner Photo by <a href="https://unsplash.com/@phillipglickman?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Phillip Glickman</a> on <a href="https://unsplash.com/photos/green-and-multicolored-robot-figurine-2umO15jsZKM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
