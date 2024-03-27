@@ -1,0 +1,775 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple_touch_icon.png">
+  <link rel="icon" href="/img/favicon32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="CHIAN-WEI, CHEN">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="各位在上一篇學廢了怎麼套用 Hexo 的 theme 及一些工具幫助撰寫 Blog，文章中也有提到怎麼安裝 deploy 的 plugin，想了解可以點為 Blog 添點顏色。 我心目中理想的方案是使用 Obsidian 來整合整個文章的發佈，達到將整理好的筆記推至 Blog 中且在本地端瀏覽起來也方便，但是深入研究之後 Obsidian 要 Push 需要訂閱如果想 sync 的話也需要訂閱加總">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub Actions 優雅部署 Hexo">
+<meta property="og:url" content="http://awilab.com/20240320564916095/index.html">
+<meta property="og:site_name" content="AwiLab">
+<meta property="og:description" content="各位在上一篇學廢了怎麼套用 Hexo 的 theme 及一些工具幫助撰寫 Blog，文章中也有提到怎麼安裝 deploy 的 plugin，想了解可以點為 Blog 添點顏色。 我心目中理想的方案是使用 Obsidian 來整合整個文章的發佈，達到將整理好的筆記推至 Blog 中且在本地端瀏覽起來也方便，但是深入研究之後 Obsidian 要 Push 需要訂閱如果想 sync 的話也需要訂閱加總">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://res.cloudinary.com/deu7aohfe/image/upload/v1710925423/20240320564916095/cfdjsyquwggf2czxtxoz.webp">
+<meta property="article:published_time" content="2024-03-20T11:39:45.000Z">
+<meta property="article:modified_time" content="2024-03-27T03:43:58.654Z">
+<meta property="article:author" content="CHIAN-WEI, CHEN">
+<meta property="article:tag" content="Blog">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="GitHub Actions">
+<meta property="article:tag" content="CI&#x2F;CD">
+<meta property="article:tag" content="Deploy">
+<meta property="article:tag" content="Continuous Deployment">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://res.cloudinary.com/deu7aohfe/image/upload/v1710925423/20240320564916095/cfdjsyquwggf2czxtxoz.webp">
+  
+  
+  
+  <title>GitHub Actions 優雅部署 Hexo - AwiLab</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/customTable.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"awilab.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"|","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>AwiLab</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首頁</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>歸檔</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分類</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>標籤</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>關於</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>連結</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://res.cloudinary.com/deu7aohfe/image/upload/v1710925423/20240320564916095/cfdjsyquwggf2czxtxoz.webp') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="GitHub Actions 優雅部署 Hexo"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-03-20 11:39" pubdate>
+          2024年3月20日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          11 分鐘
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">GitHub Actions 優雅部署 Hexo</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>各位在上一篇學廢了怎麼套用 Hexo 的 theme 及一些工具幫助撰寫 Blog，文章中也有提到怎麼安裝 deploy 的 plugin，想了解可以點<a href="https://awilab.com/202402233632500070/">為 Blog 添點顏色</a>。</p>
+<p>我心目中理想的方案是使用 Obsidian 來整合整個文章的發佈，達到將整理好的筆記推至 Blog 中且在本地端瀏覽起來也方便，但是深入研究之後 Obsidian 要 Push 需要訂閱如果想 sync 的話也需要訂閱加總起來的話價格也非常的可觀，對一個北漂求生的工程屍來說也是一筆負擔，後續會嘗試使用 Notion 應該可以達成理想中的撰寫方式，成功的話再整理成文章記錄下來當然如果有更好的方式也歡迎留言提供。</p>
+<p>本篇會多著墨於自動化部屬可以簡化整個寫作發文的流程也有助於 CI/CD 的學習，希望本章有幫上一點忙。</p>
+<h2 id="Continuous-Deployment"><a href="#Continuous-Deployment" class="headerlink" title="Continuous Deployment"></a>Continuous Deployment</h2><p>Continuous Deployment 縮寫為 CD 中文可以翻作續部署，依照需求可以與持續整合（Continuous integration, CI）配合使用，就是大家口中所述的 CI/CD。本篇實作並沒有整合自動化單元測試，因只有一人撰寫也未走完整的 git flow 在我認知中稱不上完整的 CI，所以會多著墨於 CD 的部分。</p>
+<p>說了這麼多什麼是 Continuous Deployment? <a target="_blank" rel="noopener" href="https://www.ibm.com/topics/continuous-deployment">IBM</a> 是這麼解釋的。</p>
+<blockquote>
+<p>Continuous deployment is a strategy in software development where code changes to an application are released automatically into the production environment.</p>
+</blockquote>
+<p>大意就是在軟體開發中自動將更動的程式 Build Release 並提交至 Production 環境中，以本篇的例子就是 Main branch 只要有新 commit GitHub Action 就會自動 Build 一個靜態網頁並推至 gh-pages 這個 Branch。</p>
+<h2 id="GitHub-Actions"><a href="#GitHub-Actions" class="headerlink" title="GitHub Actions"></a>GitHub Actions</h2><p>在 <a target="_blank" rel="noopener" href="https://githubuniverse.com/">GitHub Universe 2018</a>，GitHub 發佈了 GitHub Actions 可以透過它實作 CI/CD、分支管理、issue 分類等。</p>
+<p>關於計費<a target="_blank" rel="noopener" href="https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions">官網</a>寫每個月有 2000 分鐘 / 500MB 的使用上限，使用分鐘數每個月會重置但是 500MB 的儲存空間是不會重置的。機器分鐘的計算方式如下方表格，每個系統分鐘數是不一樣的如果有必要的話需要對專案的建置時間來去做優化。</p>
+<table>
+<thead>
+<tr>
+<th align="center">系統</th>
+<th align="center">分鐘</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"> Linux</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">Windows</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">macOS</td>
+<td align="center">10</td>
+</tr>
+</tbody></table>
+<p>本篇是用 ubuntu 的 OS 就是 Linux，所以分鐘數不用倍數計算。</p>
+<h2 id="GitHub-deploy-key"><a href="#GitHub-deploy-key" class="headerlink" title="GitHub deploy key"></a>GitHub deploy key</h2><p>就如同使用 Git GUI 推本地端異動到 Repository 一樣，只是這個情境換到 GitHub 的 Server 而已 Repository 要讀寫第一關一定是認證機制也一樣會需要公私鑰來去認證。</p>
+<h3 id="Generator-Key"><a href="#Generator-Key" class="headerlink" title="Generator Key"></a>Generator Key</h3><ol>
+<li>打開 Terminal 輸入下方的 command，<code>e-mail</code> 的部分可以替換成自己的 mail，接著就一路 Enter 下去。<figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">ssh-keygen</span> <span class="hljs-string">-t ed25519 -C "e-mail" -f deploy</span><br></code></pre></td></tr></tbody></table></figure></li>
+<li>一般來說 gen 出來的 key 會在<code>.ssh</code> 的資料夾內，如果沒有特別設定路徑會在 <code>User/.ssh</code>，這個資料夾預設是隱藏的可以壓 <code>command + shift + .</code> 就可以看到隱藏的資料夾了，內部有兩個檔案 <code>XXX.pub</code> &amp; <code>XXX</code>，沒有更改檔名預設會是 deploy。<div class="note note-info">
+            <ul><li>XXX.pub：公鑰</li><li> XXX：私鑰</li></ul>
+          </div></li>
+</ol>
+<h3 id="設定專案公私鑰"><a href="#設定專案公私鑰" class="headerlink" title="設定專案公私鑰"></a>設定專案公私鑰</h3><h4 id="公鑰"><a href="#公鑰" class="headerlink" title="公鑰"></a>公鑰</h4><div class="note note-info">
+            <p>Setting &gt; Deploy keys &gt; Add deploy key</p>
+          </div>
+
+<p>Title 可以隨個人喜好設定，沒有像 branch 有特別命名方式；Key 就 copy XXX 沒有副檔名的檔案內容。<br><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1711506022/20240320564916095/dbsuhsecjxothzsyce8u.webp" srcset="/img/loading.gif" lazyload alt="Add deploy key"></p>
+<h4 id="私鑰"><a href="#私鑰" class="headerlink" title="私鑰"></a>私鑰</h4><div class="note note-info">
+            <p>Setting &gt; Secrets and variables &gt; Actions &gt; New repository secret</p>
+          </div>
+
+<p>Title 可以隨個人喜好設定只要 Yaml 內容有寫對的話機器就不會找不到 Key 了。</p>
+<p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1711506159/20240320564916095/v3nz73xmz4l0phqehvum.webp" srcset="/img/loading.gif" lazyload alt="Add repository secret"></p>
+<h2 id="Yaml設定"><a href="#Yaml設定" class="headerlink" title="Yaml設定"></a>Yaml 設定</h2><p>新增 GitHub Action 執行所需的 Yaml 方式有兩種：</p>
+<ol>
+<li>在<code>.github</code> 目錄下方新增 <code>workflows</code> 資料夾，並在裡面加入 <code>deploy.yml</code> 的檔案可以針對所需開發自己需要的 job。</li>
+<li>透過 Web 設定，路徑如 <code>Actions &gt; New workflow &gt; Simple workflow</code> 就會創建一個 yml 並放在相對應路徑中方便許多，可以參考下方圖片步驟。</li>
+</ol>
+<p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1711508264/20240320564916095/eamt0czo431wsga49vdk.webp" srcset="/img/loading.gif" lazyload alt="Step 1. New workflow"></p>
+<p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1711508499/20240320564916095/dkd879bfpgn1t0ettfb0.webp" srcset="/img/loading.gif" lazyload alt="Step 2. Create simple workflow"></p>
+<p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1711508649/20240320564916095/gomia0xnwabytkegyuhx.webp" srcset="/img/loading.gif" lazyload alt="Step 3. Add Jobs"></p>
+<figure class="highlight yaml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Github action name</span><br><span class="hljs-attr">name:</span> <span class="hljs-string">Deploy</span><br><br><span class="hljs-comment"># 觸發條件</span><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">main</span> <span class="hljs-comment"># 監聽的Branch，只要有commit就會觸發</span><br><br><span class="hljs-comment"># 變數宣告</span><br><span class="hljs-attr">env:</span><br>  <span class="hljs-attr">GIT_USER:</span> <span class="hljs-string">CHIAN-WEI,</span> <span class="hljs-string">CHEN</span><br>  <span class="hljs-attr">GIT_EMAIL:</span> <span class="hljs-string">google@gmail.com</span><br>  <span class="hljs-attr">DEPLOY_REPO:</span> <span class="hljs-string">CHIAN-WEI,</span> <span class="hljs-string">CHEN/Repository</span> <span class="hljs-string">Name</span><br>  <span class="hljs-attr">DEPLOY_BRANCH:</span> <span class="hljs-string">gh-pages</span><br><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build:</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span> <span class="hljs-string">on</span> <span class="hljs-string">node</span> <span class="hljs-string">${{</span> <span class="hljs-string">matrix.node_version</span> <span class="hljs-string">}}</span> <span class="hljs-string">&amp;</span> <span class="hljs-string">${{</span> <span class="hljs-string">matrix.os</span> <span class="hljs-string">}}</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span> <span class="hljs-comment"># 建置任務的容器，有下列選擇：ubuntu-latest, windows-latest, macos-latest</span><br>    <span class="hljs-attr">strategy:</span><br>      <span class="hljs-attr">matrix:</span><br>        <span class="hljs-attr">os:</span> [ <span class="hljs-string">ubuntu-latest</span> ]<br>        <span class="hljs-attr">node_version:</span> [<span class="hljs-string">'20.x'</span>]<br><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Checkout</span> <span class="hljs-string">source</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v4</span><br><br>      <span class="hljs-comment"># 設定Deploy branch</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Checkout</span> <span class="hljs-string">deploy</span> <span class="hljs-string">repo</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v4</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">repository:</span> <span class="hljs-string">${{</span> <span class="hljs-string">env.DEPLOY_REPO</span> <span class="hljs-string">}}</span><br>          <span class="hljs-attr">ref:</span> <span class="hljs-string">${{</span> <span class="hljs-string">env.DEPLOY_BRANCH</span> <span class="hljs-string">}}</span><br>          <span class="hljs-attr">path:</span> <span class="hljs-string">.deploy_git</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Setup</span> <span class="hljs-string">Node.js</span> <span class="hljs-string">${{</span> <span class="hljs-string">matrix.node_version</span> <span class="hljs-string">}}</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">node-version:</span> <span class="hljs-string">${{</span> <span class="hljs-string">matrix.node_version</span> <span class="hljs-string">}}</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Configuration</span> <span class="hljs-string">environment</span><br>        <span class="hljs-attr">env:</span><br>          <span class="hljs-attr">HEXO_DEPLOY_PRI:</span> <span class="hljs-string">${{secrets.HEXO_DEPLOY_PRI}}</span> <span class="hljs-comment"># 須與GitHub上Repository secrets內的secret title一樣</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br><span class="hljs-string">          mkdir -p ~/.ssh/</span><br><span class="hljs-string">          echo "$HEXO_DEPLOY_PRI" &gt; ~/.ssh/id_rsa</span><br><span class="hljs-string">          chmod 600 ~/.ssh/id_rsa</span><br><span class="hljs-string">          ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts</span><br><span class="hljs-string">          git config --global user.name ${{ env.GIT_USER }}</span><br><span class="hljs-string">          git config --global user.email ${{ env.GIT_EMAIL }}</span><br><span class="hljs-string"></span><br>      <span class="hljs-comment"># Hexo環境建置</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">dependencies</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">ci</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Setup</span> <span class="hljs-string">Hexo</span> <span class="hljs-string">environment</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br><span class="hljs-string">          npm install -g hexo-cli</span><br><span class="hljs-string"></span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Hexo</span> <span class="hljs-string">clean</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br><span class="hljs-string">          hexo clean</span><br><span class="hljs-string"></span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Hexo</span> <span class="hljs-string">generate</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br><span class="hljs-string">          hexo generate</span><br><span class="hljs-string"></span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Hexo</span> <span class="hljs-string">deploy</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span><br>          <span class="hljs-string">hexo</span> <span class="hljs-string">deploy</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以前撰寫文章總是要經歷四步驟 clean、generate、server 沒問題後還要再 deploy 非常繁瑣，工程師都知道<code>科技始終來自於惰性</code>要讓過程簡化的話一定需要自動化，也讓大家撰寫部落格上更加的輕鬆，CI/CD 也是求職上加分的項目所以學會寫 yaml 也蠻重要的。</p>
+<p>希望本篇文章對你有所幫助，如果有問題或需更正歡迎留言！</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li>Banner Photo by <a target="_blank" rel="noopener" href="https://unsplash.com/@phillipglickman?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Phillip Glickman</a> on <a target="_blank" rel="noopener" href="https://unsplash.com/photos/green-and-multicolored-robot-figurine-2umO15jsZKM?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions">About billing for GitHub Actions</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ibm.com/topics/continuous-deployment">What is continuous deployment?</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.yangjerry.tw/2022/04/19/hexo-github-actions-deploy/">Hexo + GitHub Actions 部屬網站遷移全紀錄</a></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Blog/" class="category-chain-item">Blog</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Blog/" class="print-no-link">#Blog</a>
+      
+        <a href="/tags/Hexo/" class="print-no-link">#Hexo</a>
+      
+        <a href="/tags/GitHub-Actions/" class="print-no-link">#GitHub Actions</a>
+      
+        <a href="/tags/CI-CD/" class="print-no-link">#CI/CD</a>
+      
+        <a href="/tags/Deploy/" class="print-no-link">#Deploy</a>
+      
+        <a href="/tags/Continuous-Deployment/" class="print-no-link">#Continuous Deployment</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>GitHub Actions 優雅部署 Hexo</div>
+      <div>http://awilab.com/20240320564916095/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>CHIAN-WEI, CHEN</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>發布於</div>
+          <div>2024年3月20日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>許可協議</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/202402233632500070/" title="為 Blog 添點顏色">
+                        <span class="hidden-mobile">為 Blog 添點顏色</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'Chen-A-wi/AwiLab');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'Comment');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目錄</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜尋</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">關鍵字</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允許 JavaScript 運行的環境下瀏覽效果更佳</div>
+  </noscript>
+</body>
+</html>
