@@ -161,7 +161,9 @@ jobs:
 ```
 
 ## 總結
+以前撰寫文章總是要經歷四步驟clean、generate、server沒問題後還要再deploy非常繁瑣，工程師都知道`科技始終來自於惰性`要讓過程簡化的話一定需要自動化，也讓大家撰寫部落格上更加的輕鬆，CI/CD也是求職上加分的項目所以學會寫yaml也蠻重要的。
 
+希望本篇文章對你有所幫助，如果有問題或需更正歡迎留言！
 
 ## 参考
 - Banner Photo by <a href="https://unsplash.com/@phillipglickman?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Phillip Glickman</a> on <a href="https://unsplash.com/photos/green-and-multicolored-robot-figurine-2umO15jsZKM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
