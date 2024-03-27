@@ -5,7 +5,7 @@ banner_img: >-
 index_img: >-
               https://res.cloudinary.com/deu7aohfe/image/upload/v1708673349/202402233632500070/jsqhpjfpf8yzq9ovelre.webp
 categories:
-  - Hexo
+  - Blog
 tags:
   - 部落格建置
   - 部落格主題
