@@ -119,3 +119,9 @@ pangu:
 ## See path: /public/sitemap
 sitemap:
   path: sitemap.xml
+
+# NoFollow
+nofollow:
+  enable: true
+  field: site
+  exclude: ''
