@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://res.cloudinary.com/deu7aohfe/image/upload/v1706794394/202402012108647692/uqseh2404hwm0neznqto.webp">
 <meta property="article:published_time" content="2024-02-01T21:14:00.000Z">
-<meta property="article:modified_time" content="2024-04-01T00:40:20.687Z">
+<meta property="article:modified_time" content="2024-04-01T01:18:42.703Z">
 <meta property="article:author" content="CHIAN-WEI, CHEN">
 <meta property="article:tag" content="部落格建置">
 <meta property="article:tag" content="Blog">
@@ -191,7 +191,7 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+            <a class="nav-link" target="_self" href="javascript:;" rel="external nofollow noreferrer" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
               <i class="iconfont icon-search"></i>
             </a>
           </li>
@@ -199,7 +199,7 @@
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+            <a class="nav-link" target="_self" href="javascript:;" rel="external nofollow noreferrer" aria-label="Color Toggle">
               <i class="iconfont icon-dark" id="color-toggle-icon"></i>
             </a>
           </li>
@@ -308,9 +308,9 @@
 <li>隨著時間的推移內容較多時，編譯的過時會變得非常慢，這是 Ruby 先天語言的特性</li>
 <li> Jekyll 有段時間沒有更新了</li>
 </ul>
-<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><p>Hexo 是基於 Node.js 所開發的，編譯速度也是三者中居於中位原開發者實測 54 篇文章大概可以在 2 秒內跑完，有興趣的朋友可以去朝聖開發者的文章 <a target="_blank" rel="noopener" href="https://zespia.me/blog/2012/10/11/hexo-debut/">Hexo 颯爽登場！</a>。</p>
+<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><p>Hexo 是基於 Node.js 所開發的，編譯速度也是三者中居於中位原開發者實測 54 篇文章大概可以在 2 秒內跑完，有興趣的朋友可以去朝聖開發者的文章 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://zespia.me/blog/2012/10/11/hexo-debut/">Hexo 颯爽登場！</a>。</p>
 <h4 id="優點-1"><a href="#優點-1" class="headerlink" title="優點"></a>優點</h4><ul>
-<li>主題非常的多，截至目前為止有 404 個<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主題</a>，相較於 Jekyll 或是 Hugo 多非常的多</li>
+<li>主題非常的多，截至目前為止有 404 個<a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/themes/">主題</a>，相較於 Jekyll 或是 Hugo 多非常的多</li>
 <li>套件支援也非常豐富多元</li>
 <li> Hexo 開發討論區大多來自中國，中文化程度與資源相較於 Jekyll 與 Hugo 更為多元</li>
 <li>自帶主題，架設好馬上就可以使用了</li>
@@ -318,7 +318,7 @@
 <h4 id="缺點-1"><a href="#缺點-1" class="headerlink" title="缺點"></a>缺點</h4><ul>
 <li>對非中文語系的人來說會討論區較不直覺一些，但這些翻譯都能解決</li>
 </ul>
-<h3 id="Hugo"><a href="#Hugo" class="headerlink" title="Hugo"></a>Hugo</h3><p>Hugo 是基於 Go 語言所開發的，編譯速度是三者之最官網也是直接宣傳 <a target="_blank" rel="noopener" href="https://gohugo.io/">The world’s fastest framework for building websites</a>，對於熟悉 Go 的朋友這個是你的最佳選擇。</p>
+<h3 id="Hugo"><a href="#Hugo" class="headerlink" title="Hugo"></a>Hugo</h3><p>Hugo 是基於 Go 語言所開發的，編譯速度是三者之最官網也是直接宣傳 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://gohugo.io/">The world’s fastest framework for building websites</a>，對於熟悉 Go 的朋友這個是你的最佳選擇。</p>
 <h4 id="優點-2"><a href="#優點-2" class="headerlink" title="優點"></a>優點</h4><ul>
 <li>三者中最快的，每頁的建置速度不超過 1ms，建置一個 Blog 不會超過 1 秒鐘</li>
 <li>官網也宣稱轉出來後的頁面是純靜態頁面</li>
@@ -328,16 +328,16 @@
 </ul>
 <h2 id="如何使用Hexo產出靜態頁？"><a href="#如何使用Hexo產出靜態頁？" class="headerlink" title="如何使用Hexo產出靜態頁？"></a>如何使用 Hexo 產出靜態頁？</h2><p>在開始之前要先準備好前置準備，就是 Node.js 與 Git Node.js 是 Hexo 產出靜態網站所需的環境，Git 則是推上 Github 所需要的。歐！還有一個 Github 帳戶。</p>
 <h3 id="前置準備"><a href="#前置準備" class="headerlink" title="前置準備"></a>前置準備</h3><ol>
-<li>如果是 Mac 用戶且裝好了 Homebrew，那直接輸入下方指令👇。沒有的話可以<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/current">點我</a>去下載安裝 Node.js，完成後可以輸入 <code>node -v</code> 確認下版號，如果有出來的話代表安裝成功。</li>
+<li>如果是 Mac 用戶且裝好了 Homebrew，那直接輸入下方指令👇。沒有的話可以<a target="_blank" rel="noopener external nofollow noreferrer" href="https://nodejs.org/en/download/current">點我</a>去下載安裝 Node.js，完成後可以輸入 <code>node -v</code> 確認下版號，如果有出來的話代表安裝成功。</li>
 </ol>
 <figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">brew</span> <span class="hljs-string">install node</span><br></code></pre></td></tr></tbody></table></figure>
 
 <div class="note note-info">
-            <p>這裡需要注意 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/index.html#Node-js-%E7%89%88%E6%9C%AC%E9%99%90%E5%88%B6">Hexo 與 node 相對應的版本</a>，別裝錯了。</p>
+            <p>這裡需要注意 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-cn/docs/index.html#Node-js-%E7%89%88%E6%9C%AC%E9%99%90%E5%88%B6">Hexo 與 node 相對應的版本</a>，別裝錯了。</p>
           </div>
 
 <ol start="2">
-<li>接著再安裝 Git，輸入下方指令👇。沒有的話可以參考<a target="_blank" rel="noopener" href="https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8">官網</a>來安裝，這裡就不多做贅述了，完成後可以輸入 <code>git -v</code> 確認下版號，如果有出來的話代表安裝成功。</li>
+<li>接著再安裝 Git，輸入下方指令👇。沒有的話可以參考<a target="_blank" rel="noopener external nofollow noreferrer" href="https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8">官網</a>來安裝，這裡就不多做贅述了，完成後可以輸入 <code>git -v</code> 確認下版號，如果有出來的話代表安裝成功。</li>
 </ol>
 <figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">brew</span> <span class="hljs-string">install git</span><br></code></pre></td></tr></tbody></table></figure>
 
@@ -353,7 +353,7 @@
 <p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1707044288/202402012108647692/atinwqrgpahnbdtatnhw.webp" srcset="/img/loading.gif" lazyload alt="初始化Hexo"></p>
 <h3 id="安裝Hexo所需Plugin"><a href="#安裝Hexo所需Plugin" class="headerlink" title="安裝Hexo所需Plugin"></a>安裝 Hexo 所需 Plugin</h3><p>先 <code>cd</code> 進我們創建的資料夾內容中，可以使用 tree 這個套件去看資料夾內部的結構，沒有的話可以 <code>brew install tree</code>，我們只是簡單確認所以只進到第一層級應該會如下圖所顯示。</p>
 <p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1707095215/202402012108647692/a5e0a8tzfgvyduihkeyl.webp" srcset="/img/loading.gif" lazyload alt="Blog資料夾樹狀圖"></p>
-<p>如果要全顯示的話可以輸入下方的 command，或是<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhuyunier/article/details/119837816">參考這篇文章</a>選擇所需的 command。</p>
+<p>如果要全顯示的話可以輸入下方的 command，或是<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/zhuyunier/article/details/119837816">參考這篇文章</a>選擇所需的 command。</p>
 <figure class="highlight properties"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">tree</span> <span class="hljs-string">-N</span><br></code></pre></td></tr></tbody></table></figure>
 
 <p>確認好資料一樣後可以安裝所需的 plugin 了，Hexo 會依據 package-lock.json<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[package-lock.json的作用](https://yenkos.github.io/2021/04/02/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BB%80%E4%B9%88package-lock.json%20_/)">[2]</span></a></sup> 來去做 plugin 的版本管理也是依據它來安裝。</p>
@@ -376,9 +376,9 @@
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>Blog 的前期準備其實蠻花時間的，各個方面全都要自己來如果需要大量客製化的話，可能就需要把主題拉下來接著去修改裡面的 css 內容等，就會需要懂程式語言畢竟需要自行維護可客製化的內容，路途上一定會有些顛簸及坑坑洞洞的，克服後一定會有所成場的！</p>
 <p>我也會記錄下我做了哪些更動或是安裝了哪些 Plugin 從利用 Github Action 來自動化 deploy、Domain 設定、SEO 等，希望是採小章節短文章的形式避免一次太快跟不上，如果有興趣的朋友可以跟著建置一個屬於自己的 Blog，如果有任何問題也歡迎留言提問。</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li>Banner Photo by <a target="_blank" rel="noopener" href="https://unsplash.com/@saj_shafique?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Saj Shafique</a> on <a target="_blank" rel="noopener" href="https://unsplash.com/photos/silhouette-of-crane-during-sunset-jCJpn7zlyCo?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></li>
-<li><a target="_blank" rel="noopener" href="https://raychiutw.github.io/2019/Static-Site-Generator-Comparison/">靜態網站產生器大比拚</a><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.jekyll.com.cn/docs/installation/#requirements">Jekyll 安裝</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://yenkos.github.io/2021/04/02/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BB%80%E4%B9%88package-lock.json%20_/">package-lock.json 的作用</a>
+<li>Banner Photo by <a target="_blank" rel="noopener external nofollow noreferrer" href="https://unsplash.com/@saj_shafique?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Saj Shafique</a> on <a target="_blank" rel="noopener external nofollow noreferrer" href="https://unsplash.com/photos/silhouette-of-crane-during-sunset-jCJpn7zlyCo?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://raychiutw.github.io/2019/Static-Site-Generator-Comparison/">靜態網站產生器大比拚</a><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.jekyll.com.cn/docs/installation/#requirements">Jekyll 安裝</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://yenkos.github.io/2021/04/02/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E4%BB%80%E4%B9%88package-lock.json%20_/">package-lock.json 的作用</a>
 <a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section></li>
 </ul>
 
@@ -456,7 +456,7 @@
             
               
               
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow noreferrer">
                   <span class="hint--top hint--rounded" aria-label="BY - 署名">
                     <i class="iconfont icon-by"></i>
                   </span>

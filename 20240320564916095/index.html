@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://res.cloudinary.com/deu7aohfe/image/upload/v1710925423/20240320564916095/cfdjsyquwggf2czxtxoz.webp">
 <meta property="article:published_time" content="2024-03-20T11:39:45.000Z">
-<meta property="article:modified_time" content="2024-04-01T00:40:20.687Z">
+<meta property="article:modified_time" content="2024-04-01T01:18:42.703Z">
 <meta property="article:author" content="CHIAN-WEI, CHEN">
 <meta property="article:tag" content="Blog">
 <meta property="article:tag" content="Hexo">
@@ -193,7 +193,7 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+            <a class="nav-link" target="_self" href="javascript:;" rel="external nofollow noreferrer" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
               <i class="iconfont icon-search"></i>
             </a>
           </li>
@@ -201,7 +201,7 @@
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+            <a class="nav-link" target="_self" href="javascript:;" rel="external nofollow noreferrer" aria-label="Color Toggle">
               <i class="iconfont icon-dark" id="color-toggle-icon"></i>
             </a>
           </li>
@@ -300,13 +300,13 @@
 <p>我心目中理想的方案是使用 Obsidian 來整合整個文章的發佈，達到將整理好的筆記推至 Blog 中且在本地端瀏覽起來也方便，但是深入研究之後 Obsidian 要 Push 需要訂閱如果想 sync 的話也需要訂閱加總起來的話價格也非常的可觀，對一個北漂求生的工程屍來說也是一筆負擔，後續會嘗試使用 Notion 應該可以達成理想中的撰寫方式，成功的話再整理成文章記錄下來當然如果有更好的方式也歡迎留言提供。</p>
 <p>本篇會多著墨於自動化部屬可以簡化整個寫作發文的流程也有助於 CI/CD 的學習，希望本章有幫上一點忙。</p>
 <h2 id="Continuous-Deployment"><a href="#Continuous-Deployment" class="headerlink" title="Continuous Deployment"></a>Continuous Deployment</h2><p>Continuous Deployment 縮寫為 CD 中文可以翻作續部署，依照需求可以與持續整合（Continuous integration, CI）配合使用，就是大家口中所述的 CI/CD。本篇實作並沒有整合自動化單元測試，因只有一人撰寫也未走完整的 git flow 在我認知中稱不上完整的 CI，所以會多著墨於 CD 的部分。</p>
-<p>說了這麼多什麼是 Continuous Deployment? <a target="_blank" rel="noopener" href="https://www.ibm.com/topics/continuous-deployment">IBM</a> 是這麼解釋的。</p>
+<p>說了這麼多什麼是 Continuous Deployment? <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ibm.com/topics/continuous-deployment">IBM</a> 是這麼解釋的。</p>
 <blockquote>
 <p>Continuous deployment is a strategy in software development where code changes to an application are released automatically into the production environment.</p>
 </blockquote>
 <p>大意就是在軟體開發中自動將更動的程式 Build Release 並提交至 Production 環境中，以本篇的例子就是 Main branch 只要有新 commit GitHub Action 就會自動 Build 一個靜態網頁並推至 gh-pages 這個 Branch。</p>
-<h2 id="GitHub-Actions"><a href="#GitHub-Actions" class="headerlink" title="GitHub Actions"></a>GitHub Actions</h2><p>在 <a target="_blank" rel="noopener" href="https://githubuniverse.com/">GitHub Universe 2018</a>，GitHub 發佈了 GitHub Actions 可以透過它實作 CI/CD、分支管理、issue 分類等。</p>
-<p>關於計費<a target="_blank" rel="noopener" href="https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions">官網</a>寫每個月有 2000 分鐘 / 500MB 的使用上限，使用分鐘數每個月會重置但是 500MB 的儲存空間是不會重置的。機器分鐘的計算方式如下方表格，每個系統分鐘數是不一樣的如果有必要的話需要對專案的建置時間來去做優化。</p>
+<h2 id="GitHub-Actions"><a href="#GitHub-Actions" class="headerlink" title="GitHub Actions"></a>GitHub Actions</h2><p>在 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://githubuniverse.com/">GitHub Universe 2018</a>，GitHub 發佈了 GitHub Actions 可以透過它實作 CI/CD、分支管理、issue 分類等。</p>
+<p>關於計費<a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions">官網</a>寫每個月有 2000 分鐘 / 500MB 的使用上限，使用分鐘數每個月會重置但是 500MB 的儲存空間是不會重置的。機器分鐘的計算方式如下方表格，每個系統分鐘數是不一樣的如果有必要的話需要對專案的建置時間來去做優化。</p>
 <table>
 <thead>
 <tr>
@@ -359,10 +359,10 @@
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以前撰寫文章總是要經歷四步驟 clean、generate、server 沒問題後還要再 deploy 非常繁瑣，工程師都知道<code>科技始終來自於惰性</code>要讓過程簡化的話一定需要自動化，也讓大家撰寫部落格上更加的輕鬆，CI/CD 也是求職上加分的項目所以學會寫 yaml 也蠻重要的。</p>
 <p>希望本篇文章對你有所幫助，如果有問題或需更正歡迎留言！</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li>Banner Photo by <a target="_blank" rel="noopener" href="https://unsplash.com/@phillipglickman?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Phillip Glickman</a> on <a target="_blank" rel="noopener" href="https://unsplash.com/photos/green-and-multicolored-robot-figurine-2umO15jsZKM?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></li>
-<li><a target="_blank" rel="noopener" href="https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions">About billing for GitHub Actions</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.ibm.com/topics/continuous-deployment">What is continuous deployment?</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.yangjerry.tw/2022/04/19/hexo-github-actions-deploy/">Hexo + GitHub Actions 部屬網站遷移全紀錄</a></li>
+<li>Banner Photo by <a target="_blank" rel="noopener external nofollow noreferrer" href="https://unsplash.com/@phillipglickman?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Phillip Glickman</a> on <a target="_blank" rel="noopener external nofollow noreferrer" href="https://unsplash.com/photos/green-and-multicolored-robot-figurine-2umO15jsZKM?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions">About billing for GitHub Actions</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ibm.com/topics/continuous-deployment">What is continuous deployment?</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.yangjerry.tw/2022/04/19/hexo-github-actions-deploy/">Hexo + GitHub Actions 部屬網站遷移全紀錄</a></li>
 </ul>
 
                 
@@ -443,7 +443,7 @@
             
               
               
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/" rel="external nofollow noreferrer">
                   <span class="hint--top hint--rounded" aria-label="BY - 署名">
                     <i class="iconfont icon-by"></i>
                   </span>
