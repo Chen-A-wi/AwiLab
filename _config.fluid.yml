@@ -257,7 +257,7 @@ web_analytics: # 网页访问统计
   # Google Analytics 4 MEASUREMENT_ID
   # See: https://support.google.com/analytics/answer/9744165#zippy=%2Cin-this-article
   google:
-    measurement_id: G-06Z63498MG
+    measurement_id: G-ZQJ8VK2TYQ
 
   # 腾讯统计的 H5 App ID，开启高级功能才有cid
   # Tencent analytics, set APP ID
@@ -960,7 +960,7 @@ about:
   icons:
     - { class: "iconfont icon-github-fill", link: "https://github.com/Chen-A-wi", tip: "GitHub" }
     - { class: "iconfont icon-medium-fill", link: "https://medium.com/%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%B1%82%E7%94%9F%E6%8C%87%E5%8D%97-sofware-engineer-survival-guide", tip: "Medium" }
-    - { class: "iconfont icon-linkedin-fill", link: "https://www.linkedin.com/in/%E9%99%B3%E5%BB%BA%E7%B6%AD-ben", tip: "Linkedin"}
+    - { class: "iconfont icon-linkedin-fill", link: "https://www.linkedin.com/in/%E9%99%B3%E5%BB%BA%E7%B6%AD-ben", tip: "Linkedin" }
     - { class: "iconfont icon-mail", link: "mailto:tttw216@gmail.com", tip: "tttw216@gmail.com" }
 #    - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
 
