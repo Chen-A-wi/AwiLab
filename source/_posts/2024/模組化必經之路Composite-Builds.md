@@ -7,6 +7,7 @@ index_img: >-
 categories:
   - Android
 tags:
+  - Android
   - Composite Builds
   - BuildSrc
   - 模組化
