@@ -28,7 +28,10 @@ date: 2024-04-24 22:30:14
 
 當然模組化不是一個必要項目是個選項，但會走到需要優化build time這步田地的專案一定也具備相當的規模了，如果是先天不良後天又失調的專案如何在有限資源改善目前狀況變成為非常重要的課題，不然醫美近年也不會這麼夯了。
 
-## Gradle Scan
+# Version Catalog
+在 BuildSrc 時期我們會寫一個 object 來管理分類我們的 dependencies 版本及類別概念就與現在的 catalog 相似，但少了IDE support
+
+# Gradle Scan
 這邊附上 Demo 的 gradle scan，如果要優化總是需要一份報告書作為佐證可以使用下方的command來產出這份報告，從報告的time line也可以讓人更瞭解初始化的差別。
 
 ```properties
