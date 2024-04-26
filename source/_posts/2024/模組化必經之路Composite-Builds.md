@@ -131,9 +131,11 @@ Composite Builds看中文有人把它翻作複合式建構，可以把專案想�
 可以看到my-app & my-utils是build在my-composite這個專案裡面，但又自成一個方圓具備build及settings的gradle檔案，所以如果有需要獨立修改成一個專案是可行的。
 
 ## Composite Builds VS BuildSrc
-在了解 Composing build 之前，可能有看過 buildSrc 在 Gradle 執行時會自動編譯 buildSrc 裡的程式碼，所以在共用的層級非常適合寫在這邊統一維護管理，模組也可以直接引用此資料夾內的設定檔就。
+實作 Composing build 之前，可能有看過 buildSrc 在 Gradle 執行時會自動編譯 buildSrc 裡的程式碼，可以將共用程式碼抽取到buildSrc內部，後續只要引用該檔案即可有興趣的話可以看我的[Medium](https://medium.com/工程師求生指南-sofware-engineer-survival-guide/how-to-migrate-kotlin-dsl-b857c153526d)，因為篇幅關係這邊就不多做贅述。
 
-官方文件也給了個備註意思就是雖然便於進行維護管理但只要有小更動就會 rebuild 整個專案，如果有需求時可以不要 rebuild 提升開發效率只是別忘了要定期去 rebuild 專案。
+回歸正題，為什麼拋棄BuildSrc ??
+
+可以從官方文件看出一些端倪文中附上了備註意思就是雖然便於進行維護管理但只要有小更動就會 rebuild 整個專案，如果有需求時可以不要 rebuild 提升開發效率只是別忘了要定期去 rebuild 專案。
 
 {% blockquote Use buildSrc to abstract imperative logic https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources Gradle 8.1.1 %}
 A change in buildSrc causes the whole project to become out-of-date. Thus, when making small incremental changes, the --no-rebuild command-line option is often helpful to get faster feedback. Remember to run a full build regularly or at least when you’re done, though.
@@ -144,10 +146,22 @@ A change in buildSrc causes the whole project to become out-of-date. Thus, when 
 {% blockquote Josef Raska https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources Stop using Gradle buildSrc Use composite builds instead %}
 - dependency 更新會 rebuild 整個專案。
 - cache 失效，不管是 Local build cache 還是 Remote Gradle cache。
-- 剩下作者提及的 “Iteration speed is slow” 有點不太知道要如何翻譯，但我這邊理解是重複 build 的速度很慢如果理解有誤也歡迎留言。
+- 剩下作者提及的 `Iteration speed is slow` 有點不太知道要如何翻譯，但我這邊理解是重複 build 的速度很慢如果理解有誤也歡迎留言。
   {% endblockquote %}
 
-與 buildSrc 的不同在於 Composing build 是個別獨立的 module 每個都具備完整的 build gradle 並使用 include 方式來去組合一整個專案，所以如[官方](https://docs.gradle.org/current/userguide/composite_builds.html#composite_build_intro)所述可以根據需求獨立或是合併各個 module。
+與 buildSrc 的不同在於 Composing build 是個別獨立的 module 每個都具備完整的 build gradle 並使用 include 方式來去組合一整個專案，所以如[官方](https://docs.gradle.org/current/userguide/composite_builds.html#composite_build_intro)所述可以根據需求獨立或是合併各個 module 這也造就了這兩種build type先天體質上的差異。
+
+## Apply plugin
+只要在引用的 modules 宣告 plugins id 即可。
+
+```kotlin
+plugins {
+    alias(libs.plugins.android.application)
+    id("plugins.app-common-config")
+    id("plugins.compose")
+    id("quality.ktlint")
+}
+```
 
 # Gradle Scan
 這邊附上 Demo 的 gradle scan，如果要優化總是需要一份報告書作為佐證可以使用下方的command來產出這份報告，從報告的time line也可以讓人更瞭解初始化的差別。
