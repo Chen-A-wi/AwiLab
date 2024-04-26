@@ -164,11 +164,11 @@ Demo因為規模很小，如果換成大專案省下的時間會非常的可觀�
 ![Project report time line](https://res.cloudinary.com/deu7aohfe/image/upload/v1714012005/202404243075098463/uoctockxctsiwyblvla4.webp)
 
 # 總結
-複合式建構(Composite Builds)和模組化(Modularization)從來都不是一個必要的項目但是卻是專案到一定規模必須做的項目，像是職涯選擇在成為好的Team leader前不一定需要接觸過CI/CD但成為前一定會需要懂，畢竟需要資源調度也需要為專案負責。CI/CD大幅減少發版需耗費人力做重複事情，及人為的出錯都屬於值得花時間的投資項目，畢竟科技始終來自於惰性如何更舒服的上班也是很重要的課題。
+複合式建構(Composite Builds)和模組化(Modularization)從來都不是必要的項目但是卻是專案到一定規模必須做的項目，像是職涯選擇不一定需要接觸過CI/CD但成為好的Team leader前一定會需要懂，畢竟職能需要資源調度也需要為專案負責。理解哪些工作項目屬於值得花時間的投資項目，畢竟科技始終來自於惰性如何更舒服的上班也是很重要的課題。
 
-但專案成長超過一個閾值就會是一個非常值得的項目，因為小專案複雜度不高進行複合式建構及模組化後編譯速度相差非常的有限，就像本文中Demo的專案前後相差2秒體感有限。在我重構公司專案前跑一次起碼是20分鐘，每次debug成本都變得非常昂貴，這時就代表該停下來了像我以前尊敬的Team leader說得一樣，開發上需要設一個停損點~
+但專案成長超過一個閾值就會是一個非常值得的項目，因為小專案複雜度不高進行複合式建構及模組化後編譯速度相差非常的有限，就像本文中Demo的專案前後相差2秒體感有限。在我重構公司專案前跑一次起碼是20分鐘，每次debug成本都變得非常昂貴，這時就代表該停下來了像以前Tim哥說得一樣，開發上需要設一個停損點~
 
-且隨著模組化的精細度越高專案複雜度也會線性增長，這個又是另一個值得探討的課題了
+且隨著模組化的精細度越高專案複雜度也會線性增長，所帶來的開發負擔及門檻也會提高，這個又是另一個值得探討的課題了。感謝看到這邊的各位，希望在某些程度上有所幫助[範例程式](https://github.com/Chen-A-wi/ComposingBuildSample)在這邊，下次見！
 
 # 参考
 - Banner Photo by <a href="https://unsplash.com/@ilumire?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jelleke Vanooteghem</a> on <a href="https://unsplash.com/photos/toddler-playing-with-two-wooden-blocks-Aqd30KmCc3g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
