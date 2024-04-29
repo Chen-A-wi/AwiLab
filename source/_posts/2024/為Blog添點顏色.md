@@ -123,7 +123,7 @@ date: 2024-02-23 15:24:32
 
 另一個重點是免費版就可以知道各圖片的使用報告，對於改善寫作選圖等也是非常有幫助的。
 
-![Cloudinary report](https://res.cloudinary.com/deu7aohfe/image/upload/v1710379976/202402233632500070/mpetnff2f2dc7m0ulc0m.png)
+![Cloudinary report](https://res.cloudinary.com/deu7aohfe/image/upload/v1714005872/202402233632500070/antszrrt6buvp7oe74nm.webp)
 
 ## 總結
 到目前為止已經建立好Blog的環境，套用好賞心悅目的主題以及設計了Blog的icon，從前幾篇至目前為止都還沒進入Domain就可以知道前期的準備蠻久的方方面面都得自己處理。相對過程中一定也會遇到問題，但這投資是划算的可以自己優化掌控方向也是一大樂趣。希望大家至目前為止開發順利閱讀完也有些收穫，如果有任何問題也歡迎留言，下篇文章見拉！
