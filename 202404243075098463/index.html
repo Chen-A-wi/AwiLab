@@ -16,16 +16,16 @@
   <meta name="author" content="CHIAN-WEI, CHEN">
   <meta name="keywords" content="">
   
-    <meta name="description" content="在專案規模日漸增長的情況下，dependencies 的維護管理會隨著專案的複雜性與模組化使得管理越來越艱鉅，因此為解決這個問題 Gradle 7.0 推出了新的 Catalog 協助開發者來以更好的方式去維護管理 dependencies 的版本，且在新版的 IDE 也新增預設 catalog 這個選項了。 本篇會以兩大主題為主軸 Catalog &amp; Composite Builds，可">
+    <meta name="description" content="在專案規模日漸增長的情況下，dependencies 的維護管理會隨著專案的複雜性與模組化使得管理越來越艱鉅，為解決這個問題 Gradle 7.0 推出了新的 Catalog 協助開發者來以更好的方式去維護管理 dependencies 的版本，且在新版的 IDE 也新增預設 catalog 這個選項了。 本篇會以兩大主題為主軸 Catalog &amp; Composite Builds，可搭配">
 <meta property="og:type" content="article">
 <meta property="og:title" content="模組化必經之路 Composite Builds">
 <meta property="og:url" content="http://awilab.com/202404243075098463/index.html">
 <meta property="og:site_name" content="AwiLab">
-<meta property="og:description" content="在專案規模日漸增長的情況下，dependencies 的維護管理會隨著專案的複雜性與模組化使得管理越來越艱鉅，因此為解決這個問題 Gradle 7.0 推出了新的 Catalog 協助開發者來以更好的方式去維護管理 dependencies 的版本，且在新版的 IDE 也新增預設 catalog 這個選項了。 本篇會以兩大主題為主軸 Catalog &amp; Composite Builds，可">
+<meta property="og:description" content="在專案規模日漸增長的情況下，dependencies 的維護管理會隨著專案的複雜性與模組化使得管理越來越艱鉅，為解決這個問題 Gradle 7.0 推出了新的 Catalog 協助開發者來以更好的方式去維護管理 dependencies 的版本，且在新版的 IDE 也新增預設 catalog 這個選項了。 本篇會以兩大主題為主軸 Catalog &amp; Composite Builds，可搭配">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://res.cloudinary.com/deu7aohfe/image/upload/v1714005461/202404243075098463/ywcawp8irobv8dhhlhlx.webp">
 <meta property="article:published_time" content="2024-04-24T22:30:14.000Z">
-<meta property="article:modified_time" content="2024-04-29T08:33:42.496Z">
+<meta property="article:modified_time" content="2024-04-29T15:35:03.104Z">
 <meta property="article:author" content="CHIAN-WEI, CHEN">
 <meta property="article:tag" content="Android">
 <meta property="article:tag" content="Composite Builds">
@@ -326,11 +326,11 @@
             
               <div class="markdown-body">
                 
-                <p>在專案規模日漸增長的情況下，dependencies 的維護管理會隨著專案的複雜性與模組化使得管理越來越艱鉅，因此為解決這個問題 Gradle 7.0 推出了新的 <code>Catalog</code> 協助開發者來以更好的方式去維護管理 dependencies 的版本，且在新版的 IDE 也新增預設 catalog 這個選項了。</p>
-<p>本篇會以兩大主題為主軸 <code>Catalog &amp; Composite Builds</code>，可搭配官方文件一同食用此外也一並附上 Sample Code，未來有機會也可以搭配 Plugin 整合 CI/CD 自動化更新 Dependencies 版本，如果是營運的專案推薦還是手動管理為優，穩定性與風險較為可控。</p>
-<p>為了更進一步優化專案，也示範了複合式建構 (Composite Builds) 的方式來建置專案，幫助了解其中的差異及提升 Build time 的關鍵，讓你在模組化的康莊大道上走得更為愜意。</p>
+                <p>在專案規模日漸增長的情況下，dependencies 的維護管理會隨著專案的複雜性與模組化使得管理越來越艱鉅，為解決這個問題 Gradle 7.0 推出了新的 <code>Catalog</code> 協助開發者來以更好的方式去維護管理 dependencies 的版本，且在新版的 IDE 也新增預設 catalog 這個選項了。</p>
+<p>本篇會以兩大主題為主軸 <code>Catalog &amp; Composite Builds</code>，可搭配官方文件一同食用此外一並附上 Sample Code，未來有機會可以搭配 Plugin 整合 CI/CD 自動化更新 Dependencies 版本，如果是營運的專案推薦還是手動管理為優，穩定性與風險較為可控。</p>
+<p>為了更進一步優化專案，示範了複合式建構 (Composite Builds) 的方式來建置專案，幫助了解其中的差異及提升 Build time 的關鍵，讓你在模組化的康莊大道上走得更為愜意。</p>
 <p>當然模組化不是一個必要項目是個選項，但會走到需要優化 build time 這步田地的專案一定也具備相當的規模了，如果是先天不良後天又失調的專案如何在有限資源改善目前狀況變成為非常重要的課題，不然醫美近年也不會這麼夯了。</p>
-<h1 id="Version-Catalog"><a href="#Version-Catalog" class="headerlink" title="Version Catalog"></a>Version Catalog</h1><p>在 BuildSrc 時期我們會寫一個 object 來管理分類 dependencies 版本及類別概念就與現在的 catalog 相似，但少了 IDE support 所以很難看到版本更新提示需要開發者自己注意版本的更迭，當 dependencies 數量一多時會是非常困擾的問題。</p>
+<h1 id="Version-Catalog"><a href="#Version-Catalog" class="headerlink" title="Version Catalog"></a>Version Catalog</h1><p>在 BuildSrc 時期我們會寫一個 object 來管理分類 dependencies 版本及類別概念就與現在的 catalog 相似，但少了 IDE support 很難看到版本更新提示需要開發者自己注意版本的更迭，當 dependencies 數量一多時會是非常困擾的問題。</p>
 <p>Catalog 很大程度地解決這個問題，IDE 會幫你在 download 時去 check 版本，Group 相當於我們做的分類再搭配 bundles group 來做使用也可以達到我們自定義類別或是寫 extension 來分類的效果，如前言現在 IDE 已經支援 create default 了，但如果是現行專案還是需要 migrate 的來動手實作吧！</p>
 <h2 id="1-Create-catalog-file"><a href="#1-Create-catalog-file" class="headerlink" title="1. Create catalog file"></a>1. Create catalog file</h2><p>首先切到 Project 在這邊我們找到 gradle 這個資料夾，並 create 一個 file 檔名就叫 <code>libs.versions.toml</code>。</p>
 <p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1714095610/202404243075098463/n3o1yyrh5ycfdhpkke4g.webp" srcset="/img/loading.gif" lazyload alt="Create catalog"></p>
@@ -420,7 +420,7 @@
 <p>Demo 因為規模很小，如果換成大專案省下的時間會非常的可觀，這邊就附上目前專案上模組化後的 report time line 體感上就會差很多了。</p>
 <p><img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1714012005/202404243075098463/uoctockxctsiwyblvla4.webp" srcset="/img/loading.gif" lazyload alt="Project report time line"></p>
 <h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><p>複合式建構 (Composite Builds) 和模組化 (Modularization) 從來都不是必要的項目但是卻是專案到一定規模必須做的項目，像是職涯選擇不一定需要接觸過 CI/CD 但成為好的 Team leader 前一定會需要懂，畢竟職能需要資源調度也需要為專案負責。理解哪些工作項目屬於值得花時間的投資項目，畢竟科技始終來自於惰性如何更舒服的上班也是很重要的課題。</p>
-<p>專案成長超過一個閾值就會是一個非常值得的項目，因為小專案複雜度不高進行複合式建構及模組化後編譯速度成效非常的有限，就像本文中 Demo 的專案前後相差 2 秒體感有限。在我重構公司專案前跑一次起碼是 20 分鐘，每次 debug 成本都變得非常昂貴，這時就代表該停下來了像以前 Tim 哥說得一樣，開發上需要設一個停損點～</p>
+<p>專案成長超過一個閾值就會是一個非常值得的項目，因為小專案複雜度不高進行複合式建構及模組化後編譯速度成效非常的有限，就像本文中 Demo 的專案前後相差 2 秒體感有限。在我重構公司專案前跑一次起碼是 20 分鐘，每次 debug 成本都變得非常昂貴，這時就代表該停下來重新探討下工作項目，或是履歷表更新的時間因為未來的結果是可以預期的。</p>
 <p>隨著模組化的精細度越高專案複雜度也會線性增長，所帶來的開發負擔及門檻也會提高，這個又是另一個值得探討的課題了。感謝看到這邊的各位，希望在某些程度上有所幫助<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/Chen-A-wi/ComposingBuildSample">範例程式</a>在這邊，下次見！</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
 <li>Banner Photo by <a target="_blank" rel="noopener external nofollow noreferrer" href="https://unsplash.com/@ilumire?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Jelleke Vanooteghem</a> on <a target="_blank" rel="noopener external nofollow noreferrer" href="https://unsplash.com/photos/toddler-playing-with-two-wooden-blocks-Aqd30KmCc3g?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></li>
