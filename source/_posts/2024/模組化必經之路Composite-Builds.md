@@ -167,7 +167,57 @@ A change in buildSrc causes the whole project to become out-of-date. Thus, when 
 到這邊 Gradle sync 完就告了個小段落，最後在該 Module create 一個 {% label info@ settings.gradle.kts %} 的檔案即可。
 ![Create module setting file](https://res.cloudinary.com/deu7aohfe/image/upload/v1714352093/202404243075098463/tbuutjikagi5e4ofsqoj.webp)
 
-## Apply plugin
+## Module gradle
+找到 Module 的 build.gradle.kts 加入下方的程式碼基本的設定這樣就可以了，但是我會需要在 Module 寫一些 extension 的東西所以看到 Sample 有加一些 dependencies 正常設定這樣即可。
+
+```toml
+gradle-tools-build = { module = "com.android.tools.build:gradle", version.ref = "8.3.2" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "1.9.23" }
+```
+
+```kotlin
+plugins {
+    `kotlin-dsl`
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation(libs.gradle.tools.build)
+    implementation(libs.kotlin.gradle.plugin)
+    implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
+}
+```
+
+## Module settings gradle
+Settings的檔案是關聯catalog的，如果是新版IDE的話我記得不加這段依舊是可以吃到這個toml的檔案的。
+
+```kotlin
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+    versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
+}
+```
+
+## gradle extension
+因為 kotlinOptions 這個 function 蠻常被使用的所以就寫成 extension 的形式，方便之後在 Plugin class 呼叫。
+
+```kotlin
+internal fun CommonExtension<*, *, *, *, *, *>.kotlinOptions(block: KotlinJvmOptions.() -> Unit) {
+  (this as ExtensionAware).extensions.configure("kotlinOptions", block)
+}
+```
+
+## Apply customer plugin
 只要在引用的 modules 宣告 plugins id 即可。
 
 ```kotlin
