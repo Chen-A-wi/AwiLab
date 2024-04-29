@@ -208,7 +208,7 @@ dependencyResolutionManagement {
 }
 ```
 
-## gradle extension
+## Gradle extension
 因為 kotlinOptions 這個 function 蠻常被使用的所以就寫成 extension 的形式，方便之後在 Plugin class 呼叫。
 
 ```kotlin
@@ -217,8 +217,118 @@ internal fun CommonExtension<*, *, *, *, *, *>.kotlinOptions(block: KotlinJvmOpt
 }
 ```
 
+## Plugin class
+這部分算是 composing build 的核心，在這邊可以定義 plugins、defaultConfig 或是 dependencies 等，可以視情況需求寫一個共用的 plugin 未來開發上也可以省去很大一部分共用的程式碼，也可以避免有沒有修改到的問題。
+
+後續各個 module 引用即可，接著來看看大框架如下透過project target去加入相關設定，需要注意的是 project extension 並沒有 kotlinOptions 所以在這邊必須 import 先前所寫的 CommonExtension，另一個是 configure 的 extension type 也會因應 modules 是 library 或是 application 有所不同。
+
+```kotlin
+class LibCommonPlugin : Plugin<Project> {
+    override fun apply(target: Project) {
+        with(target) {
+          // plugins
+            
+            extensions.configure<ApplicationExtension> {
+                // android config
+            }
+
+          // dependencies
+        }
+    }
+}
+```
+
+這三個區塊怎麼寫呢？下面就簡單提一下可以仿照有個概念，細節可以照著Demo來去實作。
+
+### Plugins
+其實跟外面帶入 id 類似，但這邊要注意沒辦法在這邊宣告 `com.android.application` 跟 `com.android.library` 必須在外部 gradle 就宣告好這個 pluginDependencies，如果有更好的方法也歡迎告知我。
+
+```kotlin
+plugins.run {
+    apply("org.jetbrains.kotlin.android")
+    apply("de.mannodermaus.android-junit5")
+    apply("quality.ktlint")
+}
+```
+
+### Android Config
+這邊就與 gradle 中 android config 設定差不多，版號的部分也是共用 object 所以可以看到Demo裡有 import 相關的檔案。
+
+```kotlin
+import com.awilab.plugins.Versions
+
+defaultConfig {
+    compileSdk = Versions.compileSdk
+    minSdk = Versions.minSdk
+    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+}
+
+compileOptions {
+    sourceCompatibility = Versions.jdk
+    targetCompatibility = Versions.jdk
+}
+
+packaging {
+    resources.excludes.apply {
+        add("META-INF/AL2.0")
+        add("META-INF/LGPL2.1")
+    }
+}
+
+kotlinOptions {
+    jvmTarget = Versions.jdk.toString()
+}
+```
+
+### Dependencies
+這部分就很看個人了，可以寫成 DependencyHandlerScope extension function 或是像我這樣宣告一個 libs 的變數統一在 Catalogs 管理，會這麼選擇的原因是因為好像沒有必要特別再拉一個 extension function，catalog 都提供 group 的方式了，且IDE還支援版本檢查。
+
+```kotlin
+val libs = the<org.gradle.accessors.dm.LibrariesForLibs>()
+
+dependencies {
+    "implementation"(libs.androidx.appcompat)
+    "implementation"(libs.androidx.core)
+    "implementation"(libs.androidx.lifecycle.runtime)
+
+
+    //region Junit5
+    "testImplementation"(libs.test.junit.api)
+    "testRuntimeOnly"(libs.test.junit.jupiter.engine)
+    //endregion
+
+    "testImplementation"(libs.test.truth)
+    "testImplementation"(libs.test.junit)
+    "testRuntimeOnly"(libs.test.junit.vintage.engine)
+    "androidTestImplementation"(libs.test.junit.ext)
+    "androidTestImplementation"(libs.test.espresso.core)
+}
+```
+
+## Module build gradle
+先前寫好了 Plugins class 我們接著要在 module 中的 build gradle 定義好 plugin id 跟 implementationClass 讓 IDE 知道需關聯哪個 Class 後續就可以在專案中加入客製化的 plugin 了。
+
+```kotlin
+gradlePlugin {
+    plugins {
+        create("AppCommonConfig") {
+            id = "plugins.app-common-config"
+            implementationClass = "plugins.AppCommonPlugin"
+        }
+        create("Compose") {
+            id = "plugins.compose"
+            implementationClass = "plugins.ComposePlugin"
+        }
+        create("Ktlint") {
+            id = "quality.ktlint"
+            implementationClass = "quality.KtlintPlugin"
+        }
+    }
+}
+```
+
 ## Apply customer plugin
-只要在引用的 modules 宣告 plugins id 即可。
+Sync完後只要在引用的 modules 宣告 plugins id 即可。
 
 ```kotlin
 plugins {
