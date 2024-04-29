@@ -135,7 +135,7 @@ Composite Builds看中文有人把它翻作複合式建構，可以把專案想�
 
 回歸正題，為什麼拋棄BuildSrc ??
 
-可以從官方文件看出一些端倪文中附上了備註意思就是雖然便於進行維護管理但只要有小更動就會 rebuild 整個專案，如果有需求時可以不要 rebuild 提升開發效率只是別忘了要定期去 rebuild 專案。
+可以從官方文件看出一些端倪，文中附上了備註意思就是雖然便於進行維護管理但只要有小更動就會 rebuild 整個專案，如果有需求時可以不要 rebuild 提升開發效率只是別忘了要定期去 rebuild 專案。
 
 {% blockquote Use buildSrc to abstract imperative logic https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources Gradle 8.1.1 %}
 A change in buildSrc causes the whole project to become out-of-date. Thus, when making small incremental changes, the --no-rebuild command-line option is often helpful to get faster feedback. Remember to run a full build regularly or at least when you’re done, though.
@@ -150,6 +150,22 @@ A change in buildSrc causes the whole project to become out-of-date. Thus, when 
   {% endblockquote %}
 
 與 buildSrc 的不同在於 Composing build 是個別獨立的 module 每個都具備完整的 build gradle 並使用 include 方式來去組合一整個專案，所以如[官方](https://docs.gradle.org/current/userguide/composite_builds.html#composite_build_intro)所述可以根據需求獨立或是合併各個 module 這也造就了這兩種build type先天體質上的差異。
+
+## Create include build module
+先點選右上角的小齒輪在 Menu 中選擇 Project Structure ，並在 Modules 中選擇 "+" 新增一個 Module 名稱可以隨自己喜好去修改，範例中是使用 plugins 來作為 Module Name，步驟可以跟著下方圖示。
+
+### Step 1.
+![Open setting menu](https://res.cloudinary.com/deu7aohfe/image/upload/v1714351361/202404243075098463/jci28erordhelerrhyeq.webp)
+
+### Step 2.
+![Project structure](https://res.cloudinary.com/deu7aohfe/image/upload/v1714351627/202404243075098463/f136lm9pnzx2cmdijgf1.webp)
+
+
+### Step 3.
+![Create new module](https://res.cloudinary.com/deu7aohfe/image/upload/v1714351834/202404243075098463/jakyquup1rudciqatxn8.webp)
+
+到這邊 Gradle sync 完就告了個小段落，最後在該 Module create 一個 {% label info@ settings.gradle.kts %} 的檔案即可。
+![Create module setting file](https://res.cloudinary.com/deu7aohfe/image/upload/v1714352093/202404243075098463/tbuutjikagi5e4ofsqoj.webp)
 
 ## Apply plugin
 只要在引用的 modules 宣告 plugins id 即可。
@@ -180,9 +196,9 @@ Demo因為規模很小，如果換成大專案省下的時間會非常的可觀�
 # 總結
 複合式建構(Composite Builds)和模組化(Modularization)從來都不是必要的項目但是卻是專案到一定規模必須做的項目，像是職涯選擇不一定需要接觸過CI/CD但成為好的Team leader前一定會需要懂，畢竟職能需要資源調度也需要為專案負責。理解哪些工作項目屬於值得花時間的投資項目，畢竟科技始終來自於惰性如何更舒服的上班也是很重要的課題。
 
-但專案成長超過一個閾值就會是一個非常值得的項目，因為小專案複雜度不高進行複合式建構及模組化後編譯速度相差非常的有限，就像本文中Demo的專案前後相差2秒體感有限。在我重構公司專案前跑一次起碼是20分鐘，每次debug成本都變得非常昂貴，這時就代表該停下來了像以前Tim哥說得一樣，開發上需要設一個停損點~
+專案成長超過一個閾值就會是一個非常值得的項目，因為小專案複雜度不高進行複合式建構及模組化後編譯速度成效非常的有限，就像本文中Demo的專案前後相差2秒體感有限。在我重構公司專案前跑一次起碼是20分鐘，每次debug成本都變得非常昂貴，這時就代表該停下來了像以前Tim哥說得一樣，開發上需要設一個停損點~
 
-且隨著模組化的精細度越高專案複雜度也會線性增長，所帶來的開發負擔及門檻也會提高，這個又是另一個值得探討的課題了。感謝看到這邊的各位，希望在某些程度上有所幫助[範例程式](https://github.com/Chen-A-wi/ComposingBuildSample)在這邊，下次見！
+隨著模組化的精細度越高專案複雜度也會線性增長，所帶來的開發負擔及門檻也會提高，這個又是另一個值得探討的課題了。感謝看到這邊的各位，希望在某些程度上有所幫助[範例程式](https://github.com/Chen-A-wi/ComposingBuildSample)在這邊，下次見！
 
 # 参考
 - Banner Photo by <a href="https://unsplash.com/@ilumire?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jelleke Vanooteghem</a> on <a href="https://unsplash.com/photos/toddler-playing-with-two-wooden-blocks-Aqd30KmCc3g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
