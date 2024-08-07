@@ -4,7 +4,7 @@
   <url>
     <loc>http://awilab.com/202402012108647692/</loc>
     
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,16 @@
   <url>
     <loc>http://awilab.com/20240320564916095/</loc>
     
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://awilab.com/202407103204289410/</loc>
+    
+    <lastmod>2024-08-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,16 +31,7 @@
   <url>
     <loc>http://awilab.com/202404243075098463/</loc>
     
-    <lastmod>2024-04-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://awilab.com/202401263323969910/</loc>
-    
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +40,16 @@
   <url>
     <loc>http://awilab.com/202402233632500070/</loc>
     
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://awilab.com/202401263323969910/</loc>
+    
+    <lastmod>2024-08-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +58,7 @@
   <url>
     <loc>http://awilab.com/about/index.html</loc>
     
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +67,7 @@
 
   <url>
     <loc>http://awilab.com/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -66,147 +75,210 @@
   
   <url>
     <loc>http://awilab.com/tags/%E9%83%A8%E8%90%BD%E6%A0%BC%E5%BB%BA%E7%BD%AE/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/Blog/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/Github-Page/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/Hexo/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/GitHub-Actions/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/CI-CD/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/Deploy/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/Continuous-Deployment/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://awilab.com/tags/Travel/</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://awilab.com/tags/Japan/</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://awilab.com/tags/8%E5%A4%A97%E5%A4%9C/</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://awilab.com/tags/%E6%9D%B1%E4%BA%AC/</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://awilab.com/tags/%E7%AE%B1%E6%A0%B9/</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://awilab.com/tags/%E9%8E%8C%E5%80%89/</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://awilab.com/tags/%E6%B1%9F%E4%B9%8B%E5%B3%B6/</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://awilab.com/tags/%E6%97%A5%E6%9C%AC/</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://awilab.com/tags/%E6%97%85%E9%81%8A/</loc>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/Android/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/Composite-Builds/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/BuildSrc/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/%E6%A8%A1%E7%B5%84%E5%8C%96/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/Modularization/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/Plugin/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/Kotlin-DSL/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/Optimize-build-time/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/%E5%84%AA%E5%8C%96%E5%BB%BA%E6%A7%8B%E6%99%82%E9%96%93/</loc>
-    <lastmod>2024-04-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://awilab.com/tags/%E5%BF%83%E9%9D%88%E9%9B%9C%E7%82%8A/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/%E9%83%A8%E8%90%BD%E6%A0%BC%E4%B8%BB%E9%A1%8C/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/Theme/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/tags/Fluid/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://awilab.com/tags/%E5%BF%83%E9%9D%88%E9%9B%9C%E7%82%8A/</loc>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -215,21 +287,28 @@
   
   <url>
     <loc>http://awilab.com/categories/Blog/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://awilab.com/categories/Travel/</loc>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/categories/Android/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://awilab.com/categories/%E5%BF%83%E9%9D%88%E9%9B%9C%E7%82%8A/</loc>
-    <lastmod>2024-04-29</lastmod>
+    <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
