@@ -1,0 +1,848 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple_touch_icon.png">
+  <link rel="icon" href="/img/favicon32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="CHIAN-WEI, CHEN">
+  <meta name="keywords" content="">
+  
+    <meta property="og:type" content="website">
+<meta property="og:title" content="AwiLab">
+<meta property="og:url" content="http://awilab.com/index.html">
+<meta property="og:site_name" content="AwiLab">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="CHIAN-WEI, CHEN">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>AwiLab</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/customTable.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"awilab.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"|","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-06Z63498MG"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-06Z63498MG", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-06Z63498MG');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>AwiLab</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首頁</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>歸檔</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分類</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>標籤</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>關於</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>連結</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" rel="external nofollow noreferrer" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" rel="external nofollow noreferrer" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="不在於某一天突飛猛進，而是每天都能循序漸進"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/202407103204289410/" target="_self">
+          <img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1721200053/202407103204289410/ohtmjffykmgxldneyiqu.webp" srcset="/img/loading.gif" lazyload alt="東京近郊生日遊">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/202407103204289410/" target="_self">
+          東京近郊生日遊
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/202407103204289410/" target="_self">
+        <div>
+          4 月拖到現在才開始這篇文章，原本是 5 月可以開始濾拍的照片趁記憶鮮明之時留下這個片段。但接下來著手轉職的工作，本想可以趁著畢業季來換份工作，但事與願違發現今年找工作職缺也非常稀缺，對於普通人的我來說機會明顯少很多😂 現在手邊的一切都告一個段落了，就該把之前想分享的東西寫下來，會加入遊記的原因是因為只單純寫技術文章顯得我的部落格非常的生硬，少了點輕鬆的氣息可以的話希望這篇輕鬆聊聊～ 行程行程天
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-07-10 13:53" pubdate>
+              2024-07-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Travel/" class="category-chain-item">Travel</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Travel/">#Travel</a>
+            
+              <a href="/tags/Japan/">#Japan</a>
+            
+              <a href="/tags/8%E5%A4%A97%E5%A4%9C/">#8天7夜</a>
+            
+              <a href="/tags/%E6%9D%B1%E4%BA%AC/">#東京</a>
+            
+              <a href="/tags/%E7%AE%B1%E6%A0%B9/">#箱根</a>
+            
+              <a href="/tags/%E9%8E%8C%E5%80%89/">#鎌倉</a>
+            
+              <a href="/tags/%E6%B1%9F%E4%B9%8B%E5%B3%B6/">#江之島</a>
+            
+              <a href="/tags/%E6%97%A5%E6%9C%AC/">#日本</a>
+            
+              <a href="/tags/%E6%97%85%E9%81%8A/">#旅遊</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/202404243075098463/" target="_self">
+          <img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1714005461/202404243075098463/ywcawp8irobv8dhhlhlx.webp" srcset="/img/loading.gif" lazyload alt="模組化必經之路 Composite Builds">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/202404243075098463/" target="_self">
+          模組化必經之路 Composite Builds
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/202404243075098463/" target="_self">
+        <div>
+          在專案規模日漸增長的情況下，dependencies 的維護管理會隨著專案的複雜性與模組化使得管理越來越艱鉅，為解決這個問題 Gradle 7.0 推出了新的 Catalog 協助開發者來以更好的方式去維護管理 dependencies 的版本，且在新版的 IDE 也新增預設 catalog 這個選項了。 本篇會以兩大主題為主軸 Catalog &amp; Composite Builds，可搭配
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-24 22:30" pubdate>
+              2024-04-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Android/" class="category-chain-item">Android</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Android/">#Android</a>
+            
+              <a href="/tags/Composite-Builds/">#Composite Builds</a>
+            
+              <a href="/tags/BuildSrc/">#BuildSrc</a>
+            
+              <a href="/tags/%E6%A8%A1%E7%B5%84%E5%8C%96/">#模組化</a>
+            
+              <a href="/tags/Modularization/">#Modularization</a>
+            
+              <a href="/tags/Plugin/">#Plugin</a>
+            
+              <a href="/tags/Kotlin-DSL/">#Kotlin DSL</a>
+            
+              <a href="/tags/Optimize-build-time/">#Optimize build time</a>
+            
+              <a href="/tags/%E5%84%AA%E5%8C%96%E5%BB%BA%E6%A7%8B%E6%99%82%E9%96%93/">#優化建構時間</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/20240320564916095/" target="_self">
+          <img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1710925423/20240320564916095/cfdjsyquwggf2czxtxoz.webp" srcset="/img/loading.gif" lazyload alt="GitHub Actions 優雅部署 Hexo">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/20240320564916095/" target="_self">
+          GitHub Actions 優雅部署 Hexo
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/20240320564916095/" target="_self">
+        <div>
+          各位在上一篇學廢了怎麼套用 Hexo 的 theme 及一些工具幫助撰寫 Blog，文章中也有提到怎麼安裝 deploy 的 plugin，想了解可以點為 Blog 添點顏色。 我心目中理想的方案是使用 Obsidian 來整合整個文章的發佈，達到將整理好的筆記推至 Blog 中且在本地端瀏覽起來也方便，但是深入研究之後 Obsidian 要 Push 需要訂閱如果想 sync 的話也需要訂閱加總
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-20 11:39" pubdate>
+              2024-03-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Blog/" class="category-chain-item">Blog</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Blog/">#Blog</a>
+            
+              <a href="/tags/Hexo/">#Hexo</a>
+            
+              <a href="/tags/GitHub-Actions/">#GitHub Actions</a>
+            
+              <a href="/tags/CI-CD/">#CI/CD</a>
+            
+              <a href="/tags/Deploy/">#Deploy</a>
+            
+              <a href="/tags/Continuous-Deployment/">#Continuous Deployment</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/202402233632500070/" target="_self">
+          <img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1708673349/202402233632500070/jsqhpjfpf8yzq9ovelre.webp" srcset="/img/loading.gif" lazyload alt="為 Blog 添點顏色">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/202402233632500070/" target="_self">
+          為 Blog 添點顏色
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/202402233632500070/" target="_self">
+        <div>
+          到目前為止完成了 Blog 本地端建置，整體看起來非常的素面只達到堪用的程度如果想要增進 UX (User Experience) 的話勢必要做點什麼改變有兩個方案可以選擇，可以自己刻 UI (User Interface) 或是套用主題。 但選擇使用 Hexo 一定是希望可以降低維護成本所以本篇會以套用主題的方式來改善 UX，好的主題通常都會留有相對應的空間可進行調整，選搭喜歡的設定就有一定程度
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-02-23 15:24" pubdate>
+              2024-02-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Blog/" class="category-chain-item">Blog</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%83%A8%E8%90%BD%E6%A0%BC%E5%BB%BA%E7%BD%AE/">#部落格建置</a>
+            
+              <a href="/tags/Blog/">#Blog</a>
+            
+              <a href="/tags/Github-Page/">#Github Page</a>
+            
+              <a href="/tags/Hexo/">#Hexo</a>
+            
+              <a href="/tags/%E9%83%A8%E8%90%BD%E6%A0%BC%E4%B8%BB%E9%A1%8C/">#部落格主題</a>
+            
+              <a href="/tags/Theme/">#Theme</a>
+            
+              <a href="/tags/Fluid/">#Fluid</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/202402012108647692/" target="_self">
+          <img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1706794394/202402012108647692/uqseh2404hwm0neznqto.webp" srcset="/img/loading.gif" lazyload alt="Blog 輕鬆建">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/202402012108647692/" target="_self">
+          Blog 輕鬆建
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/202402012108647692/" target="_self">
+        <div>
+          單純寫文章記錄的話選擇非常的多，不管是 HackMD、Medium 都是非常不錯的選擇，像 HackMD 可以用 Markdown 來編寫對於習慣 Markdown 的我來說可以無痛轉移。 Medium 則是在我自架 Blog 前就使用了，主打以文章作為社群媒介我滿喜歡這個 idea，前期有非常強大的 SEO 可以大大提高文章的能見度，可惜後續調整了 SEO 整個改爛了，也能理解為了營利推廣訂閱會
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-02-01 21:14" pubdate>
+              2024-02-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Blog/" class="category-chain-item">Blog</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%83%A8%E8%90%BD%E6%A0%BC%E5%BB%BA%E7%BD%AE/">#部落格建置</a>
+            
+              <a href="/tags/Blog/">#Blog</a>
+            
+              <a href="/tags/Github-Page/">#Github Page</a>
+            
+              <a href="/tags/Hexo/">#Hexo</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/202401263323969910/" target="_self">
+          <img src="https://res.cloudinary.com/deu7aohfe/image/upload/v1706275849/202401263323969910/d03cgtwnbyjk7gy4pl37.webp" srcset="/img/loading.gif" lazyload alt="為什麼寫 Blog?">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/202401263323969910/" target="_self">
+          為什麼寫 Blog?
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/202401263323969910/" target="_self">
+        <div>
+          文章斷斷續續也寫了有 6 年的時間，一路從 GitBook、Medium 寫到 Hexo 在這之中也獲得了一些體悟。 今年！決定抽時間出來整理文章筆記，期望以淺顯易動的方式來解說觀念或是我理解的想法，當然如果直接說結果的話，我非常非常推薦寫技術部落格好處多多文章中也會一一細數。 起因會有寫技術部落格這個念頭當初是想要有技術交流的想法，如果有人留言那就代表有機會以不同的角度來去看這個問題，對於問題的
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-01-26 10:04" pubdate>
+              2024-01-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%BF%83%E9%9D%88%E9%9B%9C%E7%82%8A/" class="category-chain-item">心靈雜炊</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Blog/">#Blog</a>
+            
+              <a href="/tags/%E5%BF%83%E9%9D%88%E9%9B%9C%E7%82%8A/">#心靈雜炊</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜尋</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">關鍵字</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允許 JavaScript 運行的環境下瀏覽效果更佳</div>
+  </noscript>
+</body>
+</html>
