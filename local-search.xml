@@ -104,6 +104,8 @@
       
       <tag>Blog</tag>
       
+      <tag>Hexo</tag>
+      
       <tag>GitHub Actions</tag>
       
       <tag>CI/CD</tag>
@@ -111,8 +113,6 @@
       <tag>Deploy</tag>
       
       <tag>Continuous Deployment</tag>
-      
-      <tag>Hexo</tag>
       
     </tags>
     
@@ -137,13 +137,13 @@
     
     <tags>
       
-      <tag>Blog</tag>
-      
-      <tag>Hexo</tag>
-      
       <tag>部落格建置</tag>
       
+      <tag>Blog</tag>
+      
       <tag>Github Page</tag>
+      
+      <tag>Hexo</tag>
       
       <tag>部落格主題</tag>
       
@@ -174,13 +174,13 @@
     
     <tags>
       
-      <tag>Blog</tag>
-      
-      <tag>Hexo</tag>
-      
       <tag>部落格建置</tag>
       
+      <tag>Blog</tag>
+      
       <tag>Github Page</tag>
+      
+      <tag>Hexo</tag>
       
     </tags>
     
