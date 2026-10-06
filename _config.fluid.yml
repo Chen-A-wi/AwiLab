@@ -237,6 +237,7 @@ custom_js:
 # The usage is the same as custom_js
 custom_css:
   - /css/customTable.css
+  - /css/custom.css
 
 # 网页访问统计
 # Analysis of website visitors
@@ -954,7 +955,7 @@ about:
   banner_mask_alpha: 0.3
   avatar: https://res.cloudinary.com/deu7aohfe/image/upload/c_crop,g_faces,h_300,w_300/about/pivs2fvd5mt5m01yq1wt.jpg
   name: "CHIAN-WEI, CHEN"
-  intro: "An Android Developer, Nice to meet U 🤗"
+  intro: "Developer / Shutterbug / Grocer"
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
@@ -1009,6 +1010,12 @@ links:
       intro: "Sofware Engineer Survival Guide",
       link: "https://medium.com/%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%B1%82%E7%94%9F%E6%8C%87%E5%8D%97-sofware-engineer-survival-guide",
       avatar: "/img/favicon.png"
+    }
+    - {
+      title: "䒤濱屋｜RiBinWu",
+      intro: "日式選物店：貓犬選物、御守、療癒小物、零食伴手禮",
+      link: "https://www.ribinwu.com/",
+      avatar: "https://www.ribinwu.com/cdn/shop/files/logo-512_2_d9ae7b7c-2ddf-4b05-928a-a89ad2af94ea.png?v=1770019151"
     }
 
   # 当成员头像加载失败时，替换为指定图片
