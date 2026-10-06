@@ -124,4 +124,6 @@ sitemap:
 nofollow:
   enable: true
   field: site
-  exclude: ''
+  exclude:
+    - ribinwu.com
+    - www.ribinwu.com

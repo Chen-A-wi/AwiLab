@@ -1,0 +1,25 @@
+/* 䒤濱屋 選物店按鈕（沿用 Fluid .btn 尺寸，只換配色） */
+.markdown-body .btn.shop-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: 2px .75rem 2px .4rem;
+  background-color: transparent;
+  border-color: #8D746D;
+}
+
+/* 用偽元素放 logo，避開 Fluid 對 <img> 的 lazyload / 圖片放大處理 */
+.markdown-body .btn.shop-btn::before {
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: #F7F2E8 url("/img/ribinwu-logo.png") center / 85% no-repeat;
+  flex-shrink: 0;
+}
+
+.markdown-body .btn.shop-btn:hover {
+  background-color: #8D746D;
+  border-color: #8D746D;
+  color: #F7F2E8;
+}
