@@ -127,7 +127,7 @@ date: 2024-02-23 15:24:32
 
 ## 總結
 到目前為止已經建立好Blog的環境，套用好賞心悅目的主題以及設計了Blog的icon，從前幾篇至目前為止都還沒進入Domain就可以知道前期的準備蠻久的方方面面都得自己處理。相對過程中一定也會遇到問題，但這投資是划算的可以自己優化掌控方向也是一大樂趣。希望大家至目前為止開發順利閱讀完也有些收穫，如果有任何問題也歡迎留言，下篇文章見拉！
-## 参考
+## 參考
 - Banner Photo by <a href="https://unsplash.com/@8moments?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Simon Berger</a> on <a href="https://unsplash.com/photos/landscape-photography-of-mountains-twukN12EN7c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 - [如何使用 Hexo + GitHub Pages 架設個人網誌](https://hackmd.io/@Heidi-Liu/note-hexo-github)
 - [Favicon.io 最強大的網站圖示產生器，可線上文字製作或以圖片轉換](https://free.com.tw/favicon-io/)

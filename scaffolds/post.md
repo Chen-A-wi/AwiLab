@@ -7,7 +7,8 @@ categories: [ Blog, ]
 tags: [ Blog, ]
 ---
 
-內文[^1]
+內文
 
-## 参考
-[^1]: aaaa
+## 參考
+- Banner Photo by <a href="">攝影者</a> on <a href="">Unsplash</a>
+- [連結標題](網址)

@@ -30,6 +30,4 @@ date: 2024-01-24 10:05:46
 | 測試 | JUnit、MockK、Espresso |
 | 其他 | Gradle、Firebase、CI/CD（GitHub Actions） |
 
----
-
 ## Experience

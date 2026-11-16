@@ -165,7 +165,7 @@ jobs:
 
 希望本篇文章對你有所幫助，如果有問題或需更正歡迎留言！
 
-## 参考
+## 參考
 - Banner Photo by <a href="https://unsplash.com/@phillipglickman?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Phillip Glickman</a> on <a href="https://unsplash.com/photos/green-and-multicolored-robot-figurine-2umO15jsZKM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 - [About billing for GitHub Actions](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions)
 - [What is continuous deployment?](https://www.ibm.com/topics/continuous-deployment)

@@ -360,7 +360,7 @@ Demo因為規模很小，如果換成大專案省下的時間會非常的可觀�
 
 隨著模組化的精細度越高專案複雜度也會線性增長，所帶來的開發負擔及門檻也會提高，這個又是另一個值得探討的課題了。感謝看到這邊的各位，希望在某些程度上有所幫助[範例程式](https://github.com/Chen-A-wi/ComposingBuildSample)在這邊，下次見！
 
-# 参考
+# 參考
 - Banner Photo by <a href="https://unsplash.com/@ilumire?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jelleke Vanooteghem</a> on <a href="https://unsplash.com/photos/toddler-playing-with-two-wooden-blocks-Aqd30KmCc3g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 - [Sharing dependency versions between projects](https://docs.gradle.org/current/userguide/platforms.html)
 - [Migrate your build to version catalogs](https://developer.android.com/build/migrate-to-catalogs#learn-more)
